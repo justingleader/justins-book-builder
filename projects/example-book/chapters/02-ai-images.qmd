@@ -1,0 +1,36 @@
+---
+title: "AI-Generated Images"
+author: "Image Chapter Author"
+description: "A demonstration of OpenAI image generation in Quarto"
+---
+
+# AI-Generated Images
+
+This chapter demonstrates the integration of OpenAI's image generation capabilities within our book.
+
+## Example Image
+
+Here's an example of an AI-generated image:
+
+```{openai-image}
+prompt: A serene landscape with mountains and a lake at sunset
+```
+
+The image above was generated using OpenAI's DALL-E model. The image is automatically generated when the book is built, and it's included in both PDF and EPUB outputs.
+
+## How It Works
+
+The image generation process happens automatically during the book build process. When Quarto encounters a code block with the `openai-image` class, it:
+
+1. Sends the prompt to OpenAI's API
+2. Receives the generated image
+3. Saves it to the images directory
+4. Embeds it in the final output
+
+You can generate different images by changing the prompt in the code block.
+
+## Direct Image Reference
+
+Here's the same image referenced directly:
+
+![A serene landscape with mountains and a lake at sunset](../images/img_7a214e28.png) 

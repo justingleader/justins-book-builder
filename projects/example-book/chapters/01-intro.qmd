@@ -1,0 +1,20 @@
+---
+title: "Introduction"
+author: "Chapter Author"
+description: "An introduction to the book"
+---
+
+# Introduction
+
+This is the introduction chapter of the book. It provides an overview of what to expect.
+
+## About This Book
+
+This book demonstrates various features of Quarto Book Builder, including AI-generated images.
+
+{{image: A digital painting of a castle on a hill at sunset, with golden skies}}
+
+::: featured-quote
+"The journey matters more than the destination."
+**— Someone Famous**
+:::

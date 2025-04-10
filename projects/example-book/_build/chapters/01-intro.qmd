@@ -1,0 +1,22 @@
+---
+title: "Introduction"
+---
+
+# Introduction
+
+Welcome to my book. This is an example chapter.
+
+![A digital painting of a castle on a hill at sunset, with golden skies](images/placeholder_2e3b5b87.png)
+
+<!--begin-featured-quote-->
+<div class="featured-quote">
+  <blockquote>"The journey matters more than the destination."</blockquote>
+  <p class="attribution">— {Someone Famous}</p>
+</div>
+
+<!--end-featured-quote-->
+```{=latex}
+\begin{quotation}\noindent\textit{"The journey matters more than the destination."}\\
+\hfill--- {Someone Famous}\end{quotation}
+
+```

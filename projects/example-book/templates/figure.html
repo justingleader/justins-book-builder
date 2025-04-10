@@ -1,0 +1,39 @@
+<figure class="custom-figure">
+  <img src="{{ src }}" alt="{{ caption }}" class="figure-img">
+  <figcaption>
+    <strong>{{ caption }}</strong>
+    {% if description %}<p>{{ description }}</p>{% endif %}
+    {% if credit %}<span class="figure-credit">{{ credit }}</span>{% endif %}
+  </figcaption>
+</figure>
+
+<style>
+.custom-figure {
+  margin: 2em 0;
+  text-align: center;
+}
+
+.figure-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+figcaption {
+  margin-top: 0.5em;
+  font-size: 0.9em;
+  color: #555;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.figure-credit {
+  display: block;
+  font-size: 0.8em;
+  font-style: italic;
+  color: #777;
+  margin-top: 0.5em;
+}
+</style> 

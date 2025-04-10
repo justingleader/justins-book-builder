@@ -1,0 +1,37 @@
+# Quarto Book Builder Configuration
+# openai_api_key: "YOUR_API_KEY_HERE"  # Recommended: Set via OPENAI_API_KEY environment variable
+openai_api_key: null # Set via environment variable OPENAI_API_KEY for security
+image_dir: "images"
+build_dir: "_build"
+output_dir: "_book"
+max_retries: 3
+retry_delay: 5
+custom_sections:
+  featured-quote:
+    html: |
+      <div class="featured-quote">
+        <blockquote>{{ content }}</blockquote>
+        <p class="attribution">— {{ author }}</p>
+      </div>
+    latex: |
+      \begin{quotation}\noindent\textit{{{ content }}}\\
+      \hfill--- {{ author }}\end{quotation}
+  listicle:
+    html: |
+      <div class="listicle">
+        <h3>{{ title }}</h3>
+        {{ content }}
+      </div>
+    latex: |
+      \begin{mdframed}[backgroundcolor=gray!20]\textbf{Listicle: {{ title }}} 
+      {{ content }}
+      \end{mdframed}
+  callout:
+    html: templates/callout.html
+    latex: templates/callout.tex
+  figure:
+    html: templates/figure.html
+    latex: templates/figure.tex
+  code-block:
+    html: templates/code-block.html
+    latex: templates/code-block.tex

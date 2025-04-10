@@ -1,0 +1,10 @@
+book:
+  author: Your Name
+  chapters:
+  - index.qmd
+  - chapters/01-intro.qmd
+  - chapters/02-ai-images.qmd
+  date: '2025-04-07'
+  title: My Custom Book Title
+project:
+  type: book

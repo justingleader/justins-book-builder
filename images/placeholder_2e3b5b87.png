@@ -1,0 +1,2 @@
+Placeholder for image: A digital painting of a castle on a hill at sunset, with golden skies
+Error: API error: Error code: 401 - {'error': {'code': 'invalid_api_key', 'message': 'Incorrect API key provided: your-api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'param': None, 'type': 'invalid_request_error'}}

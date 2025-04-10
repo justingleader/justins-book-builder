@@ -1,0 +1,11 @@
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{{{ src }}}
+  \caption{{{ caption }}}
+  {% if description %}
+  \textit{{{ description }}}
+  {% endif %}
+  {% if credit %}
+  \\\small\textit{Credit: {{ credit }}}
+  {% endif %}
+\end{figure} 

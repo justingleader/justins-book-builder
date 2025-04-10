@@ -1,0 +1,18 @@
+book: {}
+format:
+  epub:
+    css: epub.css
+    epub-version: '3.0'
+    number-sections: true
+    toc: true
+    toc-depth: 3
+  pdf:
+    colorlinks: true
+    documentclass: book
+    geometry: 6in,9in
+    include-in-header: latex-preamble.tex
+    number-sections: true
+    toc: true
+    toc-depth: 3
+project:
+  type: book

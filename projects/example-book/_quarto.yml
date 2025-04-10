@@ -1,0 +1,48 @@
+project:
+  type: book
+
+book:
+  title: "Test Book"
+  author: "Test Author"
+  date: "2025-04-06"
+  chapters:
+    - index.qmd
+    - "chapters/01-intro.qmd"
+    - "chapters/02-ai-images.qmd"
+    - "chapters/03-template-examples.qmd"
+
+format:
+  pdf:
+    documentclass: book
+    geometry:
+      - paperwidth=6in
+      - paperheight=9in
+      - margin=1in
+    number-sections: true
+    toc: true
+    toc-depth: 3
+    filters:
+      - "filters/openai-image.lua"
+    include-in-header: 
+      text: |
+        \usepackage{graphicx}
+        \usepackage{epstopdf}
+        \usepackage{grffile}
+        \usepackage{tcolorbox}
+        \usepackage{listings}
+        \usepackage{xcolor}
+        \usepackage{mdframed}
+        \graphicspath{{../images/}}
+    default-image-extension: png
+  epub:
+    number-sections: true
+    toc: true
+    toc-depth: 3
+    css: "epub.css"
+    filters:
+      - "filters/openai-image.lua"
+  html:
+    toc: true
+    toc-depth: 3
+    filters:
+      - "filters/openai-image.lua"

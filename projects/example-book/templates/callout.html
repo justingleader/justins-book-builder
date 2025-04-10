@@ -1,0 +1,47 @@
+<div class="callout {{ type|default('info') }}">
+  <div class="callout-header">
+    <h4>{{ title }}</h4>
+  </div>
+  <div class="callout-body">
+    {{ content }}
+  </div>
+</div>
+
+<style>
+.callout {
+  margin: 1em 0;
+  padding: 1em;
+  border-left: 5px solid #4388cc;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+}
+
+.callout-header h4 {
+  margin-top: 0;
+  color: #2c5aa0;
+}
+
+.callout.warning {
+  border-left-color: #f0ad4e;
+}
+
+.callout.warning .callout-header h4 {
+  color: #8a6d3b;
+}
+
+.callout.danger {
+  border-left-color: #d9534f;
+}
+
+.callout.danger .callout-header h4 {
+  color: #a94442;
+}
+
+.callout.success {
+  border-left-color: #5cb85c;
+}
+
+.callout.success .callout-header h4 {
+  color: #3c763d;
+}
+</style> 

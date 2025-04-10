@@ -1,0 +1,23 @@
+% Default LaTeX preamble for Quarto Book Builder
+% This file defines custom environments for special sections
+
+% Required packages
+\usepackage{mdframed}
+\usepackage{xcolor}
+
+% Define custom environments for special sections
+\newenvironment{featured-quote}{%
+  \begin{mdframed}[linewidth=1pt, linecolor=gray, backgroundcolor=gray!10]
+  \begin{quotation}\itshape
+}{%
+  \end{quotation}
+  \end{mdframed}
+}
+
+\newenvironment{listicle}{%
+  \begin{mdframed}[linewidth=1pt, linecolor=gray, backgroundcolor=gray!5]
+}{%
+  \end{mdframed}
+}
+
+% Add more custom environments as needed
