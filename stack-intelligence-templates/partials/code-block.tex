@@ -1,0 +1,36 @@
+% Code block template for Stack Intelligence documents
+% Provides enhanced code blocks with titles and styling
+
+\RequirePackage{minted}
+\RequirePackage{tcolorbox}
+
+% Define a custom code block environment with title
+\newtcolorbox{si-code}[2][]{
+  enhanced,
+  arc=0pt,
+  outer arc=0pt,
+  colback=gray!5,
+  colframe=gray!40,
+  fonttitle=\bfseries,
+  coltitle=black,
+  title={#2},
+  boxed title style={
+    colback=gray!30,
+    colframe=gray!40,
+  },
+  attach boxed title to top left={xshift=0mm, yshift=0mm},
+  boxed title style={size=small, colframe=gray!40},
+  left=5pt,
+  right=5pt,
+  top=5pt,
+  bottom=5pt,
+  listing only,
+  listing engine=minted,
+  #1
+}
+
+% Example usage:
+% \begin{si-code}[language=python]{Python Example}
+% def hello_world():
+%     print("Hello, World!")
+% \end{si-code}

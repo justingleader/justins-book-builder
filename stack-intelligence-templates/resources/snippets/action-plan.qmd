@@ -1,0 +1,8 @@
+{{{< action-plan title="90-Day Executive Action Plan" >}}
+1. **Immediate (Days 1-30)**: Conduct stakeholder interviews and data assessment
+2. **Short-term (Days 31-60)**: Develop strategic roadmap based on findings
+3. **Medium-term (Days 61-90)**: Begin implementation of priority initiatives
+   - Deploy pilot program in key department
+   - Establish metrics dashboard
+   - Train team leads on new processes
+{{{< /action-plan >}}}

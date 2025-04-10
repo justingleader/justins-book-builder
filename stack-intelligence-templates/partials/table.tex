@@ -1,0 +1,40 @@
+% Enhanced table template for Stack Intelligence documents
+% This template adds additional styling to tables
+
+% New command to style table headers with Stack Intelligence colors
+\newcommand{\siheader}[1]{%
+    \noalign{\vskip 3pt}
+    \noalign{\columncolor{primaryblue}}
+    \rowcolor{primaryblue}
+    \color{white}\bfseries #1
+    \noalign{\vskip 3pt}
+}
+
+% Command to create alternating row colors
+\newcommand{\sialternate}{%
+    \rowcolors{2}{white}{gray!10}
+}
+
+% Custom table environment
+\newenvironment{si-table}[2]
+{
+    % #1 = caption, #2 = label
+    \begin{table}[htbp]
+    \centering
+    \caption{#1}
+    \label{#2}
+    \sialternate
+    \begin{tabular}
+}
+{
+    \end{tabular}
+    \end{table}
+}
+
+% For use in the document:
+% \begin{si-table}{Caption}{label}
+% {|l|l|} \hline
+% \siheader{Column 1 & Column 2} \\ \hline
+% Data 1 & Data 2 \\ \hline
+% Data 3 & Data 4 \\ \hline
+% \end{si-table}

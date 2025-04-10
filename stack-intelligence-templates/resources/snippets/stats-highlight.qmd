@@ -1,0 +1,6 @@
+{{{< stats-highlight title="Industry Benchmarks" >}}
+- **Average ROI**: 127% for companies implementing AI solutions
+- **Implementation Time**: 4.3 months (median)
+- **Cost Reduction**: 23% average across surveyed organizations
+- **Productivity Gain**: 31% improvement in process efficiency
+{{{< /stats-highlight >}}}

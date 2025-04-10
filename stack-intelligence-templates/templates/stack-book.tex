@@ -1,0 +1,227 @@
+% Stack Intelligence Book Template
+% Based on Quarto's default template, with Stack Intelligence styling
+
+% !TEX program = xelatex
+\documentclass[11pt,letterpaper,twoside,titlepage]{scrreprt}
+
+% Use UTF-8 encoding
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Typography
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{footmisc}
+\usepackage{enumitem}
+
+% Use system fonts since we can't package Helvetica Neue
+\setmainfont{Helvetica Neue}[
+  Ligatures=TeX,
+  UprightFont=*-Regular,
+  BoldFont=*-Bold,
+  ItalicFont=*-Italic,
+  BoldItalicFont=*-BoldItalic,
+]
+\setsansfont{Helvetica Neue}[
+  Ligatures=TeX,
+  UprightFont=*-Regular,
+  BoldFont=*-Bold,
+  ItalicFont=*-Italic,
+  BoldItalicFont=*-BoldItalic,
+]
+
+% If Helvetica Neue is not available, uncomment this as fallback
+% \setmainfont{Arial}
+% \setsansfont{Arial}
+
+% Page geometry
+\geometry{
+  letterpaper,
+  margin=1in,
+  headheight=14pt
+}
+
+% Define Stack Intelligence color palette
+\definecolor{primaryblue}{HTML}{2a368e}
+\definecolor{primaryorange}{HTML}{EB7527}
+\definecolor{secondaryblue}{HTML}{7EA0C6}
+\definecolor{secondarytext}{HTML}{666666}
+
+% Chapter and section styling
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\color{primaryblue}}
+  {\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{primaryblue}}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{secondaryblue}}
+  {\thesubsection}{1em}{}
+
+% Create custom environments
+% Featured Quote environment
+\newtcolorbox{featuredquote}[2][]{%
+  enhanced,
+  colback=white,
+  colframe=white,
+  arc=0pt,
+  boxrule=0pt,
+  leftrule=3pt,
+  left=10pt,
+  right=5pt,
+  top=5pt,
+  bottom=5pt,
+  colbacktitle=white,
+  coltitle=black,
+  boxed title style={empty},
+  borderline west={3pt}{0pt}{primaryorange},
+  title={#2},
+  #1
+}
+
+% Case Study Box
+\newtcolorbox{casestudy}[5][]{%
+  enhanced,
+  colback=white,
+  colframe=primaryblue,
+  arc=0pt,
+  boxrule=1pt,
+  title={\textcolor{white}{Industry Success Story: #2}},
+  fonttitle=\bfseries,
+  coltitle=white,
+  colbacktitle=primaryblue,
+  #1
+}
+
+% Listicle Box
+\newtcolorbox{listicle}[2][]{%
+  enhanced,
+  colback=gray!5,
+  colframe=gray!30,
+  arc=0pt,
+  title={#2},
+  fonttitle=\bfseries,
+  coltitle=black,
+  #1
+}
+
+% Callout Boxes
+\newtcolorbox{calloutimportant}[2][]{%
+  enhanced,
+  colback=red!5,
+  colframe=red!70!black,
+  arc=0pt,
+  title={#2},
+  fonttitle=\bfseries,
+  coltitle=white,
+  colbacktitle=red!70!black,
+  #1
+}
+
+\newtcolorbox{calloutnote}[2][]{%
+  enhanced,
+  colback=blue!5,
+  colframe=primaryblue,
+  arc=0pt,
+  title={#2},
+  fonttitle=\bfseries,
+  coltitle=white,
+  colbacktitle=primaryblue,
+  #1
+}
+
+\newtcolorbox{callouttip}[2][]{%
+  enhanced,
+  colback=green!5,
+  colframe=green!70!black,
+  arc=0pt,
+  title={#2},
+  fonttitle=\bfseries,
+  coltitle=white,
+  colbacktitle=green!70!black,
+  #1
+}
+
+% Include all the partial templates
+\input{partials/figure.tex}
+\input{partials/table.tex}
+\input{partials/code-block.tex}
+\input{partials/callouts.tex}
+\input{partials/case-study.tex}
+
+% Header and footer styling
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textcolor{secondarytext}{\leftmark}}
+\fancyhead[LO]{\textcolor{secondarytext}{\rightmark}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Hyperlinks
+\hypersetup{
+  colorlinks=true,
+  linkcolor=primaryblue,
+  filecolor=primaryblue,
+  urlcolor=primaryblue,
+  citecolor=primaryblue
+}
+
+% Table styling improvements
+\renewcommand{\arraystretch}{1.2}
+
+% List styling
+\setlist{itemsep=0.5em, topsep=0.5em}
+
+% Begin document
+\begin{document}
+
+$if(title)$
+% Include the cover page
+\input{partials/cover.tex}
+$endif$
+
+% Front matter
+\frontmatter
+
+$if(has-frontmatter)$
+$frontmatter$
+$endif$
+
+% Table of contents
+$if(toc)$
+\cleardoublepage
+\tableofcontents
+$endif$
+
+% Main content
+\mainmatter
+
+$body$
+
+% Back matter
+\backmatter
+
+$if(has-backmatter)$
+$backmatter$
+$endif$
+
+$if(title)$
+% Include back cover
+\input{partials/back-cover.tex}
+$endif$
+
+\end{document}

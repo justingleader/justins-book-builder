@@ -1,0 +1,40 @@
+% Callout template - this allows for different styles of callouts
+% Usage with parameters: title and color (default, blue, green, red, orange)
+
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+
+% Note-style callout
+\newenvironment{callout-note}[1]
+{
+\begin{calloutnote}{#1}
+}
+{
+\end{calloutnote}
+}
+
+% Tip-style callout
+\newenvironment{callout-tip}[1]
+{
+\begin{callouttip}{#1}
+}
+{
+\end{callouttip}
+}
+
+% Important-style callout
+\newenvironment{callout-important}[1]
+{
+\begin{calloutimportant}{#1}
+}
+{
+\end{calloutimportant}
+}
+
+% Featured quote callout
+\newenvironment{featured-quote}[1][]
+{
+\begin{featuredquote}
+}
+{
+\end{featuredquote}
+}

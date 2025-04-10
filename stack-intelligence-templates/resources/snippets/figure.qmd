@@ -1,0 +1,1 @@
+{{{< figure src="images/chart.png" caption="Figure 1: Annual Growth Comparison" description="Comparison of annual growth rates between industry segments" credit="Stack Intelligence Research, 2023" width="90%" >}}}
