@@ -1,0 +1,251 @@
+// Stack Intelligence SCSS styling
+
+// Stack Intelligence color variables
+$primary-blue: #2a368e;
+$primary-orange: #EB7527;
+$secondary-blue: #7EA0C6;
+$secondary-text: #666666;
+$light-gray: #f5f5f5;
+$medium-gray: #ddd;
+
+// Typography
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-blue;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem;
+  border-bottom: 2px solid $primary-blue;
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: $secondary-blue;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+// Links
+a {
+  color: $primary-blue;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Featured quote styling
+.featured-quote {
+  border-left: 4px solid $primary-orange;
+  padding-left: 1.5em;
+  margin: 2em 0;
+  
+  blockquote {
+    font-size: 1.2em;
+    font-style: italic;
+    margin: 0;
+  }
+  
+  .attribution {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 0.5em;
+  }
+}
+
+// Case study styling
+.case-study {
+  border: 1px solid $primary-blue;
+  margin: 2em 0;
+  
+  .case-study-title {
+    background-color: $primary-blue;
+    color: white;
+    padding: 0.8em 1em;
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .case-study-meta {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 0.5em;
+    padding: 1em;
+    margin: 0;
+    background-color: rgba($primary-blue, 0.05);
+    
+    dt {
+      font-weight: bold;
+      color: $secondary-text;
+    }
+  }
+  
+  .case-study-content {
+    padding: 0 1em 1em;
+  }
+  
+  blockquote {
+    font-style: italic;
+    border-left: 3px solid $secondary-blue;
+    padding-left: 1em;
+    margin: 1em;
+  }
+}
+
+// Listicle styling
+.listicle {
+  background-color: $light-gray;
+  border: 1px solid $medium-gray;
+  padding: 1em;
+  margin: 2em 0;
+  
+  h3 {
+    margin-top: 0;
+    color: $primary-blue;
+  }
+  
+  ul, ol {
+    padding-left: 1.5em;
+    
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+// Callout styling
+.callout {
+  margin: 1.5em 0;
+  padding: 1em;
+  border-left: 4px solid $secondary-blue;
+  background-color: rgba($secondary-blue, 0.1);
+  
+  .callout-title {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+  
+  &.callout-note {
+    border-left-color: $secondary-blue;
+    background-color: rgba($secondary-blue, 0.1);
+  }
+  
+  &.callout-tip {
+    border-left-color: #3cb371; // Medium sea green
+    background-color: rgba(#3cb371, 0.1);
+  }
+  
+  &.callout-important {
+    border-left-color: $primary-orange;
+    background-color: rgba($primary-orange, 0.1);
+  }
+}
+
+// Chapter header
+.chapter-header {
+  border-bottom: 2px solid $primary-blue;
+  padding-bottom: 0.5em;
+  margin-bottom: 2em;
+}
+
+// Table styling
+table {
+  width: 100%;
+  margin: 2em 0;
+  border-collapse: collapse;
+  
+  th {
+    background-color: $primary-blue;
+    color: white;
+    font-weight: bold;
+    padding: 0.5em;
+    text-align: left;
+    border: 1px solid darken($primary-blue, 10%);
+  }
+  
+  td {
+    padding: 0.5em;
+    border: 1px solid $medium-gray;
+  }
+  
+  tr:nth-child(even) {
+    background-color: $light-gray;
+  }
+}
+
+// Code styling
+pre, code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.9em;
+  background-color: $light-gray;
+  border-radius: 3px;
+}
+
+pre {
+  padding: 1em;
+  overflow-x: auto;
+  border: 1px solid $medium-gray;
+}
+
+code {
+  padding: 0.2em 0.4em;
+}
+
+// Front page banner
+.quarto-title-banner {
+  background-color: $primary-blue;
+  color: white;
+  padding: 2em 1em;
+  margin-bottom: 2em;
+  
+  h1 {
+    color: white;
+    border-bottom: none;
+  }
+  
+  .quarto-title-meta {
+    color: rgba(white, 0.9);
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  .case-study .case-study-meta {
+    grid-template-columns: 1fr;
+  }
+}

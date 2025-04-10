@@ -1,0 +1,7 @@
+{{{< case-study company="ACME Corporation" segment="Technology" revenue="$250M" challenge="Scaling cloud infrastructure" outcome="30% cost reduction" >}}
+ACME Corporation faced significant challenges with their legacy infrastructure. After implementing our solution, they were able to achieve substantial cost savings while improving performance.
+
+> The transformation was remarkable. We never expected to see such immediate results.
+> 
+> — Jane Smith, CTO at ACME Corporation
+{{{< /case-study >}}}

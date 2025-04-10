@@ -1,0 +1,52 @@
+% Back Cover Template
+\clearpage
+\thispagestyle{empty}
+\pagecolor{primaryblue}
+\begin{center}
+\vspace*{3cm}
+
+% Logo
+$if(back-cover-logo)$
+\includegraphics[width=0.3\textwidth]{$back-cover-logo$}
+$else$
+% Fallback if no logo is specified
+\textcolor{white}{\Huge\textbf{STACK}\\\Large INTELLIGENCE}
+$endif$
+
+\vspace{3cm}
+
+% Value proposition
+$if(value-proposition)$
+{\Large\textcolor{white}{$value-proposition$}}
+$else$
+{\Large\textcolor{white}{Transform your customer relationships from one-time transactions to lifetime value}}
+$endif$
+
+\vspace{3cm}
+
+% Contact information
+{\normalsize\textcolor{white}{
+$if(website)$
+Website: $website$\\
+$endif$
+$if(contact-name)$
+Executive Contact: $contact-name$$if(contact-title)$, $contact-title$$endif$\\
+$endif$
+$if(contact-email)$
+Email: $contact-email$\\
+$endif$
+$if(contact-phone)$
+Phone: $contact-phone$
+$endif$
+}}
+
+\vspace{2cm}
+
+% Copyright
+$if(copyright)$
+{\small\textcolor{white}{$copyright$}}
+$else$
+{\small\textcolor{white}{© $year$ Stack Intelligence. All rights reserved.}}
+$endif$
+\end{center}
+\pagecolor{white}

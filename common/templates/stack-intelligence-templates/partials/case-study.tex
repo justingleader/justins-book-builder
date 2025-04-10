@@ -1,0 +1,16 @@
+% Case Study template
+% Parameters: company, segment, revenue, challenge, outcome
+
+\newenvironment{case-study}[5]
+{
+\begin{casestudy}{#1}{#2}{#3}{#4}{#5}
+\begin{description}
+  \item[Industry Segment:] #2
+  \item[Annual Revenue:] #3
+  \item[Business Challenge:] #4
+  \item[Strategic Outcome:] #5
+\end{description}
+}
+{
+\end{casestudy}
+}

@@ -1,0 +1,99 @@
+---
+title: "Document Title"
+author: "Author Name"
+date: today
+template_type: "executive_brief" # Options: executive_brief, whitepaper, case_study, ebook
+format:
+  stack-pdf: default
+---
+
+# Executive Summary
+
+{{{< stats-highlight title="Key Statistics" >}}
+- **Statistic 1**: Value and brief context
+- **Statistic 2**: Value and brief context
+- **Statistic 3**: Value and brief context
+{{{< /stats-highlight >}}
+
+This executive summary provides a high-level overview of the key findings and recommendations. Limit to 1-2 paragraphs for maximum impact.
+
+# Introduction
+
+## Background and Context
+
+Provide relevant background information and context for the topic being addressed. This section should clearly establish why this document is important and relevant to the reader.
+
+## Scope and Objectives
+
+Clearly state what this document covers and what it aims to achieve. Define any boundaries or limitations of the analysis.
+
+# Key Findings
+
+## Finding 1: [Key Point]
+
+Detailed explanation of the first major finding, supported by data and analysis.
+
+{{{< figure src="images/chart1.png" caption="Figure 1: Supporting Data" description="Description of what this data shows" credit="Source: Data Source, Year" width="90%" >}}
+
+## Finding 2: [Key Point]
+
+Detailed explanation of the second major finding, supported by data and analysis.
+
+{{{< featured-quote color="primaryorange" size="normal" >}}
+This is an impactful quote that supports the finding.
+
+Industry Expert, Organization
+{{{< /featured-quote >}}
+
+## Finding 3: [Key Point]
+
+Detailed explanation of the third major finding, supported by data and analysis.
+
+# Recommendations
+
+{{{< action-plan title="Executive Action Plan" >}}
+1. **Recommendation 1**: Description and rationale
+2. **Recommendation 2**: Description and rationale
+3. **Recommendation 3**: Description and rationale
+{{{< /action-plan >}}
+
+## Detailed Recommendations
+
+### Recommendation 1: [Action Item]
+
+Expanded explanation of the first recommendation, including implementation steps, expected outcomes, and timeline.
+
+### Recommendation 2: [Action Item]
+
+Expanded explanation of the second recommendation, including implementation steps, expected outcomes, and timeline.
+
+### Recommendation 3: [Action Item]
+
+Expanded explanation of the third recommendation, including implementation steps, expected outcomes, and timeline.
+
+# Case Study
+
+{{{< case-study company="Example Company" segment="Industry" revenue="$XXM" challenge="Business Challenge" outcome="Business Outcome" >}}
+Detailed description of how a specific company addressed similar challenges and achieved meaningful results.
+
+> Quote from company representative about their experience and results.
+> 
+> — Name, Position at Example Company
+{{{< /case-study >}}
+
+# Methodology
+
+Brief description of the research methodology, data sources, and analytical approach used in developing this document.
+
+{{{< quick-tips title="Research Methods" >}}
+- Data collection approach
+- Analysis techniques
+- Validation methods
+- Limitations of the methodology
+{{{< /quick-tips >}}
+
+# About Stack Intelligence
+
+Stack Intelligence provides data-driven insights and strategic recommendations to help organizations navigate complex business challenges. Our team of experts combines deep industry knowledge with advanced analytics to deliver actionable intelligence that drives results.
+
+For more information, visit [stackintelligence.com](https://stackintelligence.com) or contact us at info@stackintelligence.com.

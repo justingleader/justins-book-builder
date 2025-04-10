@@ -1,0 +1,5 @@
+{{{< featured-quote color="primaryorange" size="normal" >}}
+This is an impactful quote that captures the essence of your message.
+
+Author Name, Position at Company
+{{{< /featured-quote >}}}

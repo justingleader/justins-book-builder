@@ -1,0 +1,410 @@
+/*-- scss:defaults --*/
+
+// Success Story Callout Variables
+$success-story-bg: rgba($success, 0.1);
+$success-story-border: $success;
+$success-story-icon: $success;
+$success-story-title-color: darken($success, 10%);
+$success-story-text-color: $body-color;
+$success-story-meta-color: darken($success, 20%);
+
+// Custom callout styling
+$callout-border-width: 4px;
+$callout-margin-top: 1.5rem;
+$callout-margin-bottom: 1.5rem;
+$callout-padding: 1.25rem;
+
+// Key Metric Listicle Variables
+$stat-box-bg: rgba($primary, 0.05);
+$stat-box-border: $primary;
+$stat-box-title-color: darken($primary, 10%);
+$stat-box-text-color: $body-color;
+$stat-box-highlight-color: $primary;
+$stat-box-secondary-color: darken($primary, 15%);
+
+// Implementation Checklist Variables
+$checklist-bg: rgba($secondary, 0.05);
+$checklist-border: $secondary;
+$checklist-title-color: darken($secondary, 10%);
+$checklist-text-color: $body-color;
+$checklist-checkbox-border: rgba($secondary, 0.6);
+$checklist-checkbox-checked-bg: $secondary;
+$checklist-checkbox-checked-color: white;
+
+/*-- scss:rules --*/
+
+// Success Story Callout Styling
+.callout-success-story {
+  background-color: $success-story-bg;
+  border-left: $callout-border-width solid $success-story-border;
+  padding: $callout-padding;
+  margin: $callout-margin-top 0 $callout-margin-bottom 0;
+  border-radius: 0.375rem;
+  
+  .callout-title {
+    color: $success-story-title-color;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+    &::before {
+      content: "✓";
+      color: $success-story-icon;
+      font-weight: bold;
+    }
+  }
+  
+  .callout-content {
+    color: $success-story-text-color;
+    
+    // Meta information styling
+    strong {
+      color: $success-story-meta-color;
+      font-weight: 600;
+    }
+    
+    // Result metrics styling
+    .result-metrics {
+      margin-top: 1rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid rgba($success-story-border, 0.2);
+      
+      strong {
+        color: $success-story-title-color;
+      }
+    }
+  }
+}
+
+// Key Metric Listicle Styling
+.figure-stats {
+  background-color: $stat-box-bg;
+  border: 1px solid rgba($stat-box-border, 0.2);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  
+  .figure-title {
+    color: $stat-box-title-color;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+    text-align: center;
+    position: relative;
+    
+    &::after {
+      content: "";
+      display: block;
+      width: 3rem;
+      height: 3px;
+      background-color: $stat-box-border;
+      margin: 0.6rem auto 0;
+    }
+  }
+  
+  ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+    
+    li {
+      margin-bottom: 1rem;
+      padding-left: 0.5rem;
+      color: $stat-box-text-color;
+      font-size: 1.05em;
+      line-height: 1.5;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      strong {
+        color: $stat-box-highlight-color;
+        font-weight: 700;
+        font-size: 1.15em;
+      }
+    }
+  }
+  
+  // Grid layout for larger screens
+  @media (min-width: 768px) {
+    ul, ol {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 1.25rem;
+      
+      li {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Implementation Checklist Styling
+.code-block-checklist {
+  background-color: $checklist-bg;
+  border: 1px solid rgba($checklist-border, 0.2);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  
+  .code-block-title {
+    color: $checklist-title-color;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    
+    &::before {
+      content: "⚙️";
+      margin-right: 0.5rem;
+    }
+    
+    &::after {
+      content: "";
+      display: block;
+      flex-grow: 1;
+      height: 1px;
+      background-color: rgba($checklist-border, 0.3);
+      margin-left: 0.75rem;
+    }
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      position: relative;
+      padding-left: 2.25rem;
+      margin-bottom: 0.75rem;
+      color: $checklist-text-color;
+      font-size: 1rem;
+      line-height: 1.5;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      &::before {
+        content: "[ ]";
+        position: absolute;
+        left: 0;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 1px solid $checklist-checkbox-border;
+        border-radius: 0.25rem;
+        margin-right: 0.5rem;
+        color: transparent;
+        background-color: white;
+        transition: all 0.2s ease;
+      }
+      
+      &.checked::before {
+        content: "✓";
+        background-color: $checklist-checkbox-checked-bg;
+        border-color: $checklist-checkbox-checked-bg;
+        color: $checklist-checkbox-checked-color;
+      }
+    }
+  }
+  
+  // Make the checklist items interactive
+  &.interactive {
+    ul li {
+      cursor: pointer;
+      
+      &:hover::before {
+        border-color: $checklist-border;
+      }
+    }
+  }
+}
+
+// Print-friendly version
+@media print {
+  .code-block-checklist {
+    border: 1px solid #ccc;
+    box-shadow: none;
+    break-inside: avoid;
+    
+    ul li::before {
+      border: 1px solid #666;
+    }
+    
+    ul li.checked::before {
+      background-color: #666;
+    }
+  }
+}
+
+// Dark mode adjustments
+.dark-mode {
+  .callout-success-story {
+    background-color: rgba($success, 0.15);
+    
+    .callout-title {
+      color: lighten($success-story-title-color, 10%);
+    }
+    
+    .callout-content {
+      strong {
+        color: lighten($success-story-meta-color, 10%);
+      }
+      
+      .result-metrics {
+        border-top-color: rgba($success-story-border, 0.3);
+      }
+    }
+  }
+  
+  .figure-stats {
+    background-color: rgba($primary, 0.15);
+    border-color: rgba($stat-box-border, 0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    
+    .figure-title {
+      color: lighten($stat-box-title-color, 10%);
+      
+      &::after {
+        background-color: lighten($stat-box-border, 10%);
+      }
+    }
+    
+    ul, ol {
+      li {
+        strong {
+          color: lighten($stat-box-highlight-color, 10%);
+        }
+      }
+    }
+  }
+  
+  .code-block-checklist {
+    background-color: rgba($secondary, 0.15);
+    border-color: rgba($checklist-border, 0.3);
+    
+    .code-block-title {
+      color: lighten($checklist-title-color, 10%);
+      
+      &::after {
+        background-color: rgba($checklist-border, 0.4);
+      }
+    }
+    
+    ul li::before {
+      border-color: rgba($checklist-checkbox-border, 0.7);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    ul li.checked::before {
+      background-color: lighten($checklist-checkbox-checked-bg, 10%);
+      border-color: lighten($checklist-checkbox-checked-bg, 10%);
+    }
+  }
+}
+
+// Definition Callout Variables
+$definition-bg: rgba(#6a0dad, 0.1);
+$definition-border: #6a0dad;
+$definition-title-color: #6a0dad;
+$definition-text-color: $body-color;
+$definition-example-border: #ccc;
+
+// Definition Callout Styling
+.definition-callout {
+  margin: 1.5em 0;
+  padding: 1em;
+  border-left: 5px solid $definition-border;
+  border-radius: 5px;
+  background-color: $definition-bg;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  .definition-header h4 {
+    margin-top: 0;
+    color: $definition-title-color;
+    font-weight: bold;
+  }
+
+  .definition-body {
+    color: $definition-text-color;
+  }
+
+  .definition-example {
+    margin-top: 0.75em;
+    font-style: italic;
+    border-top: 1px dotted $definition-example-border;
+    padding-top: 0.5em;
+  }
+}
+
+// Expert Quote Styling
+.callout-expert-quote {
+  background-color: rgba($primary, 0.05);
+  border-left: $callout-border-width solid $primary;
+  padding: $callout-padding;
+  margin: $callout-margin-top 0 $callout-margin-bottom 0;
+  border-radius: 0.375rem;
+  
+  h3 {
+    color: darken($primary, 10%);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  
+  blockquote {
+    font-style: italic;
+    border-left: none;
+    padding: 0;
+    margin: 0 0 0.75rem 0;
+  }
+  
+  p {
+    margin-bottom: 0;
+  }
+}
+
+// Comparison Table Styling
+.callout-comparison {
+  background-color: rgba($success, 0.05);
+  border: 1px solid rgba($success, 0.2);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  
+  h3 {
+    color: darken($success, 10%);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    
+    th, td {
+      padding: 0.75rem;
+      border: 1px solid rgba($success, 0.2);
+    }
+    
+    th {
+      background-color: rgba($success, 0.1);
+      font-weight: 600;
+    }
+    
+    tr:nth-child(even) td {
+      background-color: rgba($success, 0.03);
+    }
+  }
+} 

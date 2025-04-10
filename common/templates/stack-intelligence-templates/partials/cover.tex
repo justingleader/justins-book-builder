@@ -1,0 +1,56 @@
+% Stack Intelligence Cover Page Template
+\begin{titlepage}
+\pagecolor{white}
+\begin{center}
+
+% Logo placeholder - will need to be replaced with actual logo path
+\vspace*{1cm}
+$if(cover-image)$
+\includegraphics[width=0.25\textwidth]{$cover-image$}
+$else$
+% Fallback if no logo is specified
+\textcolor{primaryblue}{\Huge\textbf{STACK}\\\Large INTELLIGENCE}
+$endif$
+
+\vspace{3cm}
+
+% Title
+{\fontsize{32pt}{38pt}\selectfont\textcolor{primaryblue}{\textbf{$title$}}}
+
+\vspace{1cm}
+
+% Subtitle if specified
+$if(subtitle)$
+{\fontsize{20pt}{24pt}\selectfont\textcolor{secondaryblue}{$subtitle$}}
+\vspace{1cm}
+$endif$
+
+% Authors
+$if(author)$
+\Large
+$for(author)$
+$author$\\
+$endfor$
+$endif$
+
+\vspace{1cm}
+
+% Optional executive quote in Primary Orange
+$if(cover-quote)$
+{\large\textcolor{primaryorange}{\textit{"$cover-quote$"}}}
+$if(cover-quote-author)$
+\\\vspace{0.3cm}
+{\normalsize\textcolor{primaryorange}{— $cover-quote-author$}}
+$endif$
+$endif$
+
+\vfill
+
+% Optional date
+$if(date)$
+{\large\textcolor{secondarytext}{$date$}}
+$endif$
+
+\end{center}
+\end{titlepage}
+\pagecolor{white}

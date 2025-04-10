@@ -1,12 +1,16 @@
 project:
   type: book
+  output-dir: _book
 
 book:
   title: "2x your Lifetime Customer Value with Salesforce Commerce and Revenue Cloud"
+  subtitle: "A comprehensive guide for implementing and optimizing Salesforce Commerce Cloud"
   author:
     - Naj Irshad
     - Shantanu Bhardwaj
     - Justin Leader
+  publisher: "Stack Intelligence"
+  date: "2023"
   chapters:
     - index.md
     - 00a_Introduction.md
@@ -23,9 +27,45 @@ book:
     - 11.md
     - 12.md
 
-# Optional: Add format configurations if needed (e.g., pdf, html)
 format:
-#   html:
-#     theme: cosmo
   pdf:
-    documentclass: scrreprt 
+    include-in-header: 
+      - text: |
+          \usepackage{xcolor}
+          \usepackage{tcolorbox}
+          \usepackage{fontspec}
+          \usepackage{fancyhdr}
+          \tcbuselibrary{skins,breakable}
+          
+          % Stack Intelligence colors
+          \definecolor{primaryblue}{HTML}{2a368e}
+          \definecolor{primaryorange}{HTML}{EB7527}
+          \definecolor{secondaryblue}{HTML}{7EA0C6}
+          \definecolor{secondarytext}{HTML}{666666}
+          
+          % Use system fonts
+          \setmainfont{Helvetica Neue}
+          
+          % Header and footer styling
+          \pagestyle{fancy}
+          \fancyhf{}
+          \fancyhead[LE,RO]{\thepage}
+          \fancyhead[RE,LO]{\slshape\nouppercase{\leftmark}}
+          \fancyfoot[C]{\textcopyright\ 2023 Stack Intelligence}
+          \renewcommand{\headrulewidth}{0.4pt}
+          \renewcommand{\footrulewidth}{0pt}
+    documentclass: scrreprt
+    papersize: letter
+    fontsize: 11pt
+    toc: true
+    toc-title: "CONTENTS"
+    number-sections: true
+    colorlinks: true
+    linkcolor: primaryblue
+    geometry:
+      - margin=1in
+    fig-width: 6
+    fig-height: 4
+    highlight-style: github
+    filters:
+      - stack-shortcodes.lua

@@ -1,0 +1,227 @@
+/* Stack Intelligence Responsive Stylesheet */
+/* Part of Phase 4: Cross-Format Optimization */
+
+/* Base responsive rules */
+@media screen and (max-width: 1200px) {
+  body {
+    padding: 1.5em;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    padding: 1em;
+  }
+  
+  .container {
+    width: 95%;
+  }
+  
+  h1 {
+    font-size: 2.2em;
+  }
+  
+  h2 {
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0.8em;
+    font-size: 0.95em;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  h2 {
+    font-size: 1.6em;
+  }
+  
+  h3 {
+    font-size: 1.3em;
+  }
+  
+  /* Adjust content blocks for medium screens */
+  .case-study-meta {
+    grid-template-columns: 1fr 2fr;
+  }
+  
+  .featured-quote {
+    padding-left: 1em;
+  }
+  
+  /* Adjust navigation for tablets */
+  .sidebar {
+    width: 220px;
+  }
+  
+  .main-content {
+    margin-left: 220px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    padding: 0.5em;
+    font-size: 0.9em;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  h2 {
+    font-size: 1.4em;
+  }
+  
+  h3 {
+    font-size: 1.2em;
+  }
+  
+  /* Stack elements vertically on small screens */
+  .case-study-meta {
+    grid-template-columns: 1fr;
+  }
+  
+  .case-study-meta dt {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+  }
+  
+  .case-study-meta dd {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  
+  /* Make featured quotes more compact */
+  .featured-quote {
+    margin: 1.5em 0;
+    padding-left: 0.8em;
+  }
+  
+  /* Convert two-column layouts to single column */
+  .two-column, .three-column {
+    display: block;
+  }
+  
+  .two-column > div, .three-column > div {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1em;
+  }
+  
+  /* Adjust tables for small screens */
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  /* Make sidebar a bottom nav on mobile */
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+    top: auto;
+    left: auto;
+  }
+  
+  .main-content {
+    margin-left: 0;
+  }
+  
+  /* Adjust the toc for mobile view */
+  #TOC {
+    position: relative;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 0.85em;
+  }
+  
+  /* Further simplify UI elements */
+  .code-title {
+    padding: 0.3em;
+  }
+  
+  pre {
+    padding: 0.5em;
+  }
+  
+  /* Minimize padding to maximize readable area */
+  .case-study, .callout, .listicle {
+    padding: 0.5em;
+  }
+}
+
+/* Print-specific styles */
+@media print {
+  body {
+    font-size: 11pt;
+    line-height: 1.4;
+    color: black;
+    background: white;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  /* Print URLs after links */
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.9em;
+    font-style: italic;
+  }
+  
+  /* Hide navigation elements */
+  .sidebar, #TOC, nav, .no-print {
+    display: none !important;
+  }
+  
+  /* Full width content */
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  /* Page breaks */
+  h1, h2, h3 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  
+  table, figure, .case-study, .featured-quote {
+    page-break-inside: avoid;
+  }
+  
+  img {
+    max-width: 100% !important;
+  }
+  
+  /* Adjust colors for print */
+  h1, h2, h3, h4, h5, h6 {
+    color: black;
+  }
+  
+  .case-study-title {
+    background-color: white !important;
+    color: black !important;
+    border-bottom: 1pt solid black;
+  }
+  
+  /* Simplify backgrounds for print */
+  .listicle, .callout {
+    background-color: white !important;
+    border: 1pt solid black;
+  }
+}

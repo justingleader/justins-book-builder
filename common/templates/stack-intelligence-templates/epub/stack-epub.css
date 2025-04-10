@@ -1,0 +1,306 @@
+/* Stack Intelligence EPUB Stylesheet */
+/* Optimized for e-reader devices and compliance with EPUB standards */
+
+/* Typography */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  color: #333333;
+}
+
+/* Fallback fonts for e-readers that don't support Helvetica Neue */
+@font-face {
+  font-family: "Stack Sans";
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Stack Sans";
+  font-weight: bold;
+  font-style: normal;
+  src: url("fonts/OpenSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Stack Sans";
+  font-weight: normal;
+  font-style: italic;
+  src: url("fonts/OpenSans-Italic.ttf");
+}
+
+/* Stack Intelligence brand colors */
+:root {
+  --primary-blue: #2a368e;
+  --primary-orange: #EB7527;
+  --secondary-blue: #7EA0C6;
+  --secondary-text: #666666;
+  --light-gray: #f5f5f5;
+  --medium-gray: #dddddd;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", "Stack Sans", Helvetica, Arial, sans-serif;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+h1 {
+  color: var(--primary-blue);
+  font-size: 2em;
+  border-bottom: 2px solid var(--primary-blue);
+  padding-bottom: 0.2em;
+}
+
+h2 {
+  color: var(--primary-blue);
+  font-size: 1.5em;
+}
+
+h3 {
+  color: var(--primary-blue);
+  font-size: 1.2em;
+}
+
+h4 {
+  color: var(--secondary-text);
+  font-size: 1.1em;
+}
+
+/* Links */
+a {
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Featured quote styling - simplified for EPUB */
+.featured-quote {
+  border-left: 3px solid var(--primary-orange);
+  padding-left: 1em;
+  margin: 1.5em 0;
+}
+
+.featured-quote blockquote {
+  font-style: italic;
+  margin: 0;
+}
+
+.featured-quote .attribution {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+
+/* Case study - optimized for EPUB */
+.case-study {
+  border: 1px solid var(--primary-blue);
+  margin: 1.5em 0;
+  padding-bottom: 1em;
+}
+
+.case-study-title {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 0.5em;
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.case-study-meta {
+  padding: 0.5em;
+  margin: 0;
+}
+
+.case-study-meta dt {
+  font-weight: bold;
+  color: var(--secondary-text);
+  margin-top: 0.5em;
+}
+
+.case-study-meta dd {
+  margin-left: 1em;
+}
+
+.case-study-content {
+  padding: 0 0.5em;
+}
+
+/* Listicle */
+.listicle {
+  background-color: var(--light-gray);
+  border: 1px solid var(--medium-gray);
+  padding: 0.5em 1em;
+  margin: 1.5em 0;
+}
+
+.listicle h3 {
+  margin-top: 0.5em;
+}
+
+/* Callouts */
+.callout {
+  margin: 1.5em 0;
+  padding: 0.5em 1em;
+  border-left: 3px solid var(--primary-blue);
+  background-color: var(--light-gray);
+}
+
+.callout-important {
+  border-left-color: var(--primary-orange);
+}
+
+.callout-tip {
+  border-left-color: #28a745;
+}
+
+.callout-note {
+  border-left-color: var(--secondary-blue);
+}
+
+.callout-title {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+/* Figures */
+figure {
+  margin: 1.5em 0;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  color: var(--secondary-text);
+}
+
+/* Tables - simplified for EPUB compatibility */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+th {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 0.5em;
+  text-align: left;
+}
+
+td {
+  padding: 0.5em;
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+tr:nth-child(even) {
+  background-color: var(--light-gray);
+}
+
+/* Code blocks */
+pre {
+  background-color: var(--light-gray);
+  padding: 1em;
+  border: 1px solid var(--medium-gray);
+  overflow-x: auto;
+  font-size: 0.9em;
+  margin: 1.5em 0;
+}
+
+code {
+  font-family: monospace;
+}
+
+.code-title {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 0.5em;
+  font-weight: bold;
+}
+
+/* Action plans and statistics highlights */
+.action-plan, .stats-highlight {
+  margin: 1.5em 0;
+  padding: 0.5em 1em;
+  border: 1px solid var(--primary-orange);
+  background-color: rgba(235, 117, 39, 0.05);
+}
+
+.action-plan h4, .stats-highlight h4 {
+  color: var(--primary-orange);
+  margin-top: 0.5em;
+}
+
+/* Cover page */
+.cover {
+  text-align: center;
+  padding: 2em 0;
+}
+
+.cover h1 {
+  border-bottom: none;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.cover h2 {
+  font-weight: normal;
+  color: var(--secondary-text);
+  margin-top: 0;
+}
+
+.cover .author {
+  margin-top: 2em;
+  font-weight: bold;
+}
+
+/* Executive summary */
+.executive-summary {
+  border-bottom: 2px solid var(--primary-blue);
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+}
+
+/* Page breaks - for better EPUB reading experience */
+h1 {
+  page-break-before: always;
+}
+
+.case-study, .featured-quote, figure, table {
+  page-break-inside: avoid;
+}
+
+/* Responsive adjustments for different screen sizes */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 0.95em;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  h2 {
+    font-size: 1.4em;
+  }
+  
+  .case-study-meta dt, .case-study-meta dd {
+    display: block;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,378 @@
+/* Stack Intelligence CSS styling - Enhanced Version */
+
+/* Stack Intelligence color variables */
+:root {
+  --primary-blue: #2a368e;
+  --primary-orange: #EB7527;
+  --secondary-blue: #7EA0C6;
+  --secondary-text: #666666;
+  --light-gray: #f5f5f5;
+  --medium-gray: #ddd;
+  --dark-gray: #444;
+}
+
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-blue);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.5rem;
+  border-bottom: 2px solid var(--primary-blue);
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-blue);
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+/* Links */
+a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--primary-orange);
+}
+
+/* Featured quote styling */
+.featured-quote {
+  border-left: 4px solid var(--primary-orange);
+  padding-left: 1.5em;
+  margin: 2em 0;
+  background-color: rgba(235, 117, 39, 0.05);
+  padding: 1.5em 1.5em 1.5em 2em;
+}
+
+.featured-quote blockquote {
+  font-size: 1.2em;
+  font-style: italic;
+  margin: 0;
+  quotes: """ """ "'" "'";
+}
+
+.featured-quote blockquote::before {
+  content: open-quote;
+  font-size: 2em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+  color: var(--primary-orange);
+}
+
+.featured-quote .attribution {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 0.8em;
+  color: var(--dark-gray);
+}
+
+/* Case study styling */
+.case-study {
+  border: 1px solid var(--primary-blue);
+  margin: 2em 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.case-study .case-study-title {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 0.8em 1em;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.case-study .case-study-meta {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 0.5em;
+  padding: 1em;
+  margin: 0;
+  background-color: rgba(42, 54, 142, 0.05);
+}
+
+.case-study .case-study-meta dt {
+  font-weight: bold;
+  color: var(--secondary-text);
+}
+
+.case-study .case-study-content {
+  padding: 0 1em 1em;
+}
+
+.case-study blockquote {
+  font-style: italic;
+  border-left: 3px solid var(--secondary-blue);
+  padding-left: 1em;
+  margin: 1em;
+  background-color: rgba(126, 160, 198, 0.05);
+  padding: 1em 1em 1em 1.5em;
+}
+
+/* Listicle styling */
+.listicle {
+  background-color: var(--light-gray);
+  border: 1px solid var(--medium-gray);
+  padding: 1.5em;
+  margin: 2em 0;
+  border-radius: 4px;
+}
+
+.listicle h3 {
+  margin-top: 0;
+  color: var(--primary-blue);
+  border-bottom: 1px solid var(--medium-gray);
+  padding-bottom: 0.5em;
+}
+
+.listicle ul, .listicle ol {
+  padding-left: 1.5em;
+  margin-bottom: 0;
+}
+
+.listicle ul li, .listicle ol li {
+  margin-bottom: 0.8em;
+}
+
+.listicle ul li:last-child, .listicle ol li:last-child {
+  margin-bottom: 0;
+}
+
+/* Callout styling */
+.callout {
+  margin: 1.5em 0;
+  padding: 1.5em;
+  border-left: 4px solid var(--secondary-blue);
+  background-color: rgba(126, 160, 198, 0.1);
+  border-radius: 0 4px 4px 0;
+}
+
+.callout .callout-title {
+  font-weight: bold;
+  margin-bottom: 0.8em;
+  font-size: 1.1em;
+}
+
+.callout.callout-note {
+  border-left-color: var(--secondary-blue);
+  background-color: rgba(126, 160, 198, 0.1);
+}
+
+.callout.callout-tip {
+  border-left-color: #3cb371;
+  background-color: rgba(60, 179, 113, 0.1);
+}
+
+.callout.callout-important {
+  border-left-color: var(--primary-orange);
+  background-color: rgba(235, 117, 39, 0.1);
+}
+
+/* Chapter header */
+.chapter-header {
+  border-bottom: 2px solid var(--primary-blue);
+  padding-bottom: 0.8em;
+  margin-bottom: 2.5em;
+}
+
+/* Table styling */
+table.si-table {
+  width: 100%;
+  margin: 2em 0;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+table.si-table th, 
+.si-table .si-header {
+  background-color: var(--primary-blue);
+  color: white;
+  font-weight: bold;
+  padding: 0.8em;
+  text-align: left;
+  border: 1px solid #232d7e;
+}
+
+table.si-table td {
+  padding: 0.8em;
+  border: 1px solid var(--medium-gray);
+}
+
+table.si-table tr.even-row,
+table.si-table tr:nth-child(even) {
+  background-color: var(--light-gray);
+}
+
+/* Figure styling */
+.si-figure {
+  margin: 2em 0;
+  text-align: center;
+}
+
+.si-figure img {
+  max-width: 100%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.si-figure figcaption {
+  margin-top: 0.8em;
+  font-weight: bold;
+  color: var(--secondary-text);
+}
+
+.si-figure .credit {
+  font-weight: normal;
+  font-style: italic;
+  display: block;
+  font-size: 0.9em;
+  margin-top: 0.3em;
+}
+
+.si-figure .description {
+  color: var(--secondary-text);
+  max-width: 80%;
+  margin: 0.5em auto;
+}
+
+/* Code styling */
+pre, code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.9em;
+  background-color: var(--light-gray);
+  border-radius: 3px;
+}
+
+pre {
+  padding: 1em;
+  overflow-x: auto;
+  border: 1px solid var(--medium-gray);
+}
+
+code {
+  padding: 0.2em 0.4em;
+}
+
+.code-with-title {
+  margin: 2em 0;
+}
+
+.code-with-title .code-title {
+  background-color: #e0e0e0;
+  padding: 0.5em 1em;
+  font-weight: bold;
+  border: 1px solid var(--medium-gray);
+  border-bottom: none;
+  border-radius: 3px 3px 0 0;
+}
+
+.code-with-title pre {
+  margin-top: 0;
+  border-radius: 0 0 3px 3px;
+}
+
+/* Front page banner */
+.quarto-title-banner {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 3em 2em;
+  margin-bottom: 2em;
+}
+
+.quarto-title-banner h1 {
+  color: white;
+  border-bottom: none;
+  margin-bottom: 0.5em;
+}
+
+.quarto-title-banner .quarto-title-meta {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Math equations */
+.math {
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+/* Print styling */
+@media print {
+  body {
+    font-size: 11pt;
+  }
+  
+  h1 {
+    font-size: 24pt;
+  }
+  
+  h2 {
+    font-size: 18pt;
+  }
+  
+  h3 {
+    font-size: 14pt;
+  }
+  
+  .case-study, .callout, .featured-quote, .listicle {
+    break-inside: avoid;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  body {
+    padding: 0 0.8em;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  .case-study .case-study-meta {
+    grid-template-columns: 1fr;
+  }
+  
+  .quarto-title-banner {
+    padding: 2em 1em;
+  }
+  
+  table.si-table {
+    display: block;
+    overflow-x: auto;
+  }
+}

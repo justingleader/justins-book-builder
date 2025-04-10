@@ -1,0 +1,13 @@
+% Callout template
+\begin{tcolorbox}[
+  enhanced,
+  title={#1},
+  colback=white,
+  colframe=#3!80!black,
+  fonttitle=\bfseries,
+  coltitle=white,
+  attach boxed title to top left={yshift=-\tcboxedtitleheight/2, xshift=5mm},
+  boxed title style={colback=#3}
+]
+#2
+\end{tcolorbox}

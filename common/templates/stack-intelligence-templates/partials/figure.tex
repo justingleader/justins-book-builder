@@ -1,0 +1,26 @@
+% Figure template for Stack Intelligence documents
+% Parameters: src, caption, description, credit
+
+\newenvironment{si-figure}[4]
+{
+    \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{#1}
+    \caption{#2\protect\footnotemark}
+    \end{figure}
+    \footnotetext{#4}
+    
+    \ifx\\#3\\
+    % If no description, do nothing
+    \else
+    \begin{quote}
+    \textit{#3}
+    \end{quote}
+    \fi
+}
+{
+}
+
+% Usage in Lua filter:
+% \begin{si-figure}{path/to/image.png}{Caption text}{Optional description}{Image credit}
+% \end{si-figure}

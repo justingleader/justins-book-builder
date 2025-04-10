@@ -1,0 +1,297 @@
+---
+title: "Stack Intelligence Template Shortcode Reference"
+author: "Stack Intelligence Team"
+date: "April 2025"
+format: 
+  stack-intelligence-templates-pdf:
+    toc: true
+---
+
+# Stack Intelligence Template Shortcode Reference
+
+This document serves as a reference guide for all available shortcodes in the Stack Intelligence template system. Each shortcode is explained with syntax, parameters, and usage examples to help you create professional business documents quickly and consistently.
+
+## Featured Quote Shortcode
+
+The `featured-quote` shortcode creates a visually distinctive quote with proper attribution formatting.
+
+### Syntax
+
+```markdown
+{{< featured-quote >}}
+"Quote text goes here."
+Author Name, Title
+{{< /featured-quote >}}
+```
+
+### Parameters
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `color` | Color accent for the quote | `primaryorange` |
+| `size` | Font size for the quote | `normal` |
+
+### Example
+
+{{< featured-quote >}}
+"The most powerful person in the world is the storyteller. The storyteller sets the vision, values, and agenda of an entire generation that is to come."
+Steve Jobs
+{{< /featured-quote >}}
+
+## Case Study Shortcode
+
+The `case-study` shortcode presents a real-world example with structured metadata and optional quote.
+
+### Syntax
+
+```markdown
+{{< case-study company="Company Name" segment="Industry Segment" revenue="Annual Revenue" challenge="Business Challenge" outcome="Strategic Outcome" >}}
+Case study content goes here. This can include multiple paragraphs and even lists.
+
+> "Optional quote from customer"
+>
+> — Customer Name, Title
+{{< /case-study >}}
+```
+
+### Parameters
+
+| Parameter | Description | Required |
+|-----------|-------------|----------|
+| `company` | Company name | Yes |
+| `segment` | Industry segment | No |
+| `revenue` | Annual revenue information | No |
+| `challenge` | Business challenge description | No |
+| `outcome` | Strategic outcome summary | No |
+| `highlight` | Optional text to highlight | No |
+
+### Example
+
+{{< case-study company="TechNova Solutions" segment="B2B SaaS" revenue="$12M Annual" challenge="High customer acquisition costs with low retention" outcome="127% increase in CLV over 18 months" >}}
+TechNova Solutions struggled with high customer churn despite steady new customer acquisition. Upon analysis, they discovered that 65% of customers weren't using key features that delivered the most value.
+
+Their approach involved creating personalized customer journeys with milestone-based education and check-ins:
+
+1. Implemented automated onboarding sequences targeting specific use cases
+2. Established a "success team" separate from sales to focus on retention
+3. Created usage-based health scores to identify at-risk accounts
+4. Developed a tiered loyalty program rewarding long-term customers
+
+> "By shifting our focus from acquiring new customers to maximizing the value of existing relationships, we completely transformed our business economics."
+>
+> — Elena Rodriguez, CEO, TechNova Solutions
+{{< /case-study >}}
+
+## Listicle Shortcode
+
+The `listicle` shortcode creates a structured list with a title, useful for presenting key points or steps.
+
+### Syntax
+
+```markdown
+{{< listicle title="List Title" >}}
+1. First important point
+2. Second important point
+3. Third important point
+{{< /listicle >}}
+```
+
+### Parameters
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `title` | Title for the listicle | "Key Points" |
+| `style` | Optional style class | "" |
+
+### Example
+
+{{< listicle title="Top Strategies for Business Growth" >}}
+1. **Focus on customer retention** - It costs 5-7x more to acquire new customers than retain existing ones
+2. **Implement data-driven personalization** - Companies using personalization see 40% higher revenue
+3. **Develop strategic partnerships** - Partnerships can expand your reach with minimal investment
+4. **Optimize your pricing strategy** - Regular price optimization can increase profits by 25%
+5. **Invest in employee development** - Companies with engaged employees outperform competitors by 202%
+{{< /listicle >}}
+
+## Figure Shortcode
+
+The `figure` shortcode creates a professional figure with caption, description, and credit line.
+
+### Syntax
+
+```markdown
+{{< figure src="path/to/image.png" caption="Figure caption" description="Longer description" credit="Image credit" width="80%" >}}
+```
+
+### Parameters
+
+| Parameter | Description | Required |
+|-----------|-------------|----------|
+| `src` | Path to the image file | Yes |
+| `caption` | Short caption for the figure | No |
+| `description` | Longer description text | No |
+| `credit` | Attribution for the image | No |
+| `width` | Image width | No, defaults to "80%" |
+
+## Enhanced Table Shortcode
+
+The `enhanced-table` shortcode creates professionally styled tables with Stack Intelligence branding.
+
+### Syntax
+
+```markdown
+{{< enhanced-table title="Table Title" >}}
+| Header 1 | Header 2 | Header 3 |
+|----------|----------|----------|
+| Data 1   | Data 2   | Data 3   |
+| Data 4   | Data 5   | Data 6   |
+{{< /enhanced-table >}}
+```
+
+### Parameters
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `title` | Title for the table | "" |
+
+## Code Block Shortcode
+
+The `code-block` shortcode creates a code block with a title and syntax highlighting.
+
+### Syntax
+
+```markdown
+{{< code-block title="Example Code" language="python" >}}
+def hello_world():
+    print("Hello, world!")
+{{< /code-block >}}
+```
+
+### Parameters
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `title` | Title for the code block | "Code" |
+| `language` | Programming language for syntax highlighting | "" |
+
+### Example
+
+{{< code-block title="Python Function Example" language="python" >}}
+def calculate_roi(investment, returns):
+    """Calculate the Return on Investment (ROI)."""
+    if investment <= 0:
+        raise ValueError("Investment must be positive")
+    
+    roi = (returns - investment) / investment * 100
+    return f"{roi:.2f}%"
+
+# Example usage
+initial_investment = 50000
+annual_returns = 65000
+print(f"ROI: {calculate_roi(initial_investment, annual_returns)}")
+# Output: ROI: 30.00%
+{{< /code-block >}}
+
+## Action Plan Shortcode
+
+The `action-plan` shortcode creates a callout box specifically for executive action plans.
+
+### Syntax
+
+```markdown
+{{< action-plan title="Executive Action Plan" >}}
+1. First action item
+2. Second action item
+3. Third action item
+{{< /action-plan >}}
+```
+
+### Parameters
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `title` | Title for the action plan | "Executive Action Plan" |
+
+### Example
+
+{{< action-plan title="Implementation Framework" >}}
+When implementing a customer lifetime value strategy, executive leadership must:
+
+1. Establish CLV as a top-level KPI reported to the board
+2. Realign incentives to reward customer retention and expansion
+3. Invest in data infrastructure to measure and predict CLV accurately
+4. Create cross-functional teams focused on improving customer experience
+5. Develop a phased rollout plan with clear success metrics at each stage
+{{< /action-plan >}}
+
+## Stats Highlight Shortcode
+
+The `stats-highlight` shortcode creates a callout box for highlighting important statistics.
+
+### Syntax
+
+```markdown
+{{< stats-highlight title="Key Statistics" >}}
+- Statistic 1: Value
+- Statistic 2: Value
+- Statistic 3: Value
+{{< /stats-highlight >}}
+```
+
+### Parameters
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `title` | Title for the statistics box | "Key Statistics" |
+
+### Example
+
+{{< stats-highlight title="CLV Impact Statistics" >}}
+- **5-7x** more expensive to acquire new customers than retain existing ones
+- **60-70%** likelihood of selling to an existing customer vs. 5-20% for new prospects
+- **25-95%** profit increase from just a 5% improvement in customer retention
+- **380%** increase in CLV over two years for businesses with a 360° customer strategy
+{{< /stats-highlight >}}
+
+## Quick Tips Shortcode
+
+The `quick-tips` shortcode creates a callout box for practical tips and recommendations.
+
+### Syntax
+
+```markdown
+{{< quick-tips title="Quick Tips" >}}
+- Tip 1
+- Tip 2
+- Tip 3
+{{< /quick-tips >}}
+```
+
+### Parameters
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `title` | Title for the tips box | "Quick Tips" |
+
+### Example
+
+{{< quick-tips title="Getting Started with CLV Improvement" >}}
+- Implement a simple NPS or CSAT survey program
+- Analyze your top 20% of customers to identify common characteristics
+- Create a basic segmentation model for marketing communications
+- Review and improve your customer onboarding materials
+- Establish a regular customer business review process
+{{< /quick-tips >}}
+
+## Combining Shortcodes
+
+Shortcodes can be combined to create rich, engaging documents. For example, you might use a case study alongside statistics and an action plan to present a comprehensive business case.
+
+Remember that all shortcodes in the Stack Intelligence template system:
+
+1. Maintain consistent Stack Intelligence branding
+2. Work across PDF and HTML outputs
+3. Follow accessibility best practices
+4. Are designed for business-focused content
+
+For assistance with template usage or custom requirements, please contact the Stack Intelligence team.

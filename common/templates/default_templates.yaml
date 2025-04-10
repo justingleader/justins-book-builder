@@ -1,0 +1,222 @@
+# Default Templates for Quarto Book Builder
+# These templates are available to all book projects
+
+featured-quote:
+  html: |
+    <div class="featured-quote">
+      <blockquote>{{ content }}</blockquote>
+      <p class="attribution">— {{ author }}</p>
+    </div>
+  latex: |
+    \begin{quotation}\noindent\textit{{{ content }}}\\
+    \hfill--- {{ author }}\end{quotation}
+
+listicle:
+  html: |
+    <div class="listicle">
+      <h3>{{ title }}</h3>
+      {{ content }}
+    </div>
+  latex: |
+    \begin{mdframed}[backgroundcolor=gray!20]\textbf{Listicle: {{ title }}} 
+    {{ content }}
+    \end{mdframed}
+
+callout:
+  html: |
+    <div class="callout callout-{{ type }}">
+      <h3>{{ title }}</h3>
+      {{ content }}
+    </div>
+  latex: |
+    \begin{mdframed}[backgroundcolor=gray!10]
+    \textbf{{{ title }}}\\
+    {{ content }}
+    \end{mdframed}
+
+figure:
+  html: |
+    <figure>
+      <img src="{{ src }}" alt="{{ description }}">
+      <figcaption>{{ caption }} {% if credit %}<span class="credit">{{ credit }}</span>{% endif %}</figcaption>
+    </figure>
+  latex: |
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{{{ src }}}
+    \caption{{{ caption }}{% if credit %} (Credit: {{ credit }}){% endif %}}
+    \end{figure}
+
+code-block:
+  html: |
+    <div class="code-with-title">
+      <div class="code-title">{{ title }}</div>
+      <pre><code class="language-{{ language }}">{{ content }}</code></pre>
+    </div>
+  latex: |
+    \begin{tcblisting}{title={{ title }},listing only,colback=gray!5,colframe=gray!50!black}
+    {{ content }}
+    \end{tcblisting}
+
+expert-quote:
+  html: |
+    <div class="callout callout-expert-quote">
+      <h3>Expert Insight</h3>
+      <blockquote>{{ quote_text }}</blockquote>
+      <p><strong>— {{ expert_name }}</strong><br>
+      <em>{{ expert_title }}, {{ company }}</em></p>
+    </div>
+  latex: |
+    \begin{mdframed}[backgroundcolor=blue!5]
+    \textbf{Expert Insight}\\
+    \begin{quotation}\noindent\textit{{{ quote_text }}}\end{quotation}\\
+    \hfill--- \textbf{{{ expert_name }}}\\
+    \hfill\textit{{{ expert_title }}, {{ company }}}
+    \end{mdframed}
+
+comparison-table:
+  html: |
+    <div class="callout callout-comparison">
+      <h3>{{ title }}</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Aspect</th>
+            <th>{{ option_1 }}</th>
+            <th>{{ option_2 }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ aspect_1 }}</td>
+            <td>{{ description_1_1 }}</td>
+            <td>{{ description_1_2 }}</td>
+          </tr>
+          <tr>
+            <td>{{ aspect_2 }}</td>
+            <td>{{ description_2_1 }}</td>
+            <td>{{ description_2_2 }}</td>
+          </tr>
+          <tr>
+            <td>{{ aspect_3 }}</td>
+            <td>{{ description_3_1 }}</td>
+            <td>{{ description_3_2 }}</td>
+          </tr>
+          <tr>
+            <td>{{ aspect_4 }}</td>
+            <td>{{ description_4_1 }}</td>
+            <td>{{ description_4_2 }}</td>
+          </tr>
+          <tr>
+            <td>{{ aspect_5 }}</td>
+            <td>{{ description_5_1 }}</td>
+            <td>{{ description_5_2 }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  latex: |
+    \begin{mdframed}[backgroundcolor=green!5]
+    \textbf{{{ title }}}\\
+    \begin{tabular}{|p{2cm}|p{5cm}|p{5cm}|}
+    \hline
+    \textbf{Aspect} & \textbf{{{ option_1 }}} & \textbf{{{ option_2 }}} \\
+    \hline
+    {{ aspect_1 }} & {{ description_1_1 }} & {{ description_1_2 }} \\
+    \hline
+    {{ aspect_2 }} & {{ description_2_1 }} & {{ description_2_2 }} \\
+    \hline
+    {{ aspect_3 }} & {{ description_3_1 }} & {{ description_3_2 }} \\
+    \hline
+    {{ aspect_4 }} & {{ description_4_1 }} & {{ description_4_2 }} \\
+    \hline
+    {{ aspect_5 }} & {{ description_5_1 }} & {{ description_5_2 }} \\
+    \hline
+    \end{tabular}
+    \end{mdframed}
+
+definition-callout:
+  html: |
+    <div class="definition-callout">
+      <div class="definition-header">
+        <h4>{{ term }}</h4>
+      </div>
+      <div class="definition-body">
+        {{ definition }}
+        {% if example %}
+        <div class="definition-example">
+          <strong>Example:</strong> {{ example }}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  latex: |
+    \begin{tcolorbox}[
+      colframe=purple,
+      colback=purple!5,
+      coltitle=white,
+      title={{ term }},
+      fonttitle=\bfseries
+    ]
+    {{ definition }}
+    
+    {% if example %}
+    \vspace{0.5em}
+    \textbf{Example:} \textit{{{ example }}}
+    {% endif %}
+    \end{tcolorbox}
+
+callout-success-story:
+  html: |
+    <div class="callout-success-story">
+      <div class="callout-header">
+        <h3>{{ title|default("Success Story") }}</h3>
+      </div>
+      <div class="callout-body">
+        <p><strong>Company:</strong> {{ company }}</p>
+        <p><strong>Challenge:</strong> {{ challenge }}</p>
+        <p><strong>Solution:</strong> {{ solution }}</p>
+        <p><strong>Result:</strong> {{ result|safe }}</p>
+        {% if quote %}
+        <blockquote>"{{ quote }}"<br>— {{ quote_author }}{% if quote_title %}, {{ quote_title }}{% endif %}</blockquote>
+        {% endif %}
+      </div>
+    </div>
+  latex: |
+    \begin{mdframed}[backgroundcolor=green!5,frametitle=Success Story]
+    \textbf{Company:} {{ company }}\\
+    \textbf{Challenge:} {{ challenge }}\\
+    \textbf{Solution:} {{ solution }}\\
+    \textbf{Result:} {{ result }}\\
+    
+    {% if quote %}
+    \begin{quote}
+    ``{{ quote }}''\\
+    --- {{ quote_author }}{% if quote_title %}, {{ quote_title }}{% endif %}
+    \end{quote}
+    {% endif %}
+    \end{mdframed}
+
+figure-stats:
+  html: |
+    <div class="figure-stats">
+      <h3>{{ title }}</h3>
+      {{ content }}
+    </div>
+  latex: |
+    \begin{mdframed}[backgroundcolor=blue!5]
+    \textbf{{{ title }}}\\
+    {{ content }}
+    \end{mdframed}
+
+code-block-checklist:
+  html: |
+    <div class="code-block-checklist">
+      <h3>{{ title }}</h3>
+      {{ content }}
+    </div>
+  latex: |
+    \begin{mdframed}[backgroundcolor=yellow!5]
+    \textbf{{{ title }}}\\
+    {{ content }}
+    \end{mdframed} 
