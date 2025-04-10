@@ -1,0 +1,187 @@
+---
+title: "Stack Intelligence Cross-Format Test"
+author: "Stack Intelligence Team"
+date: "2023-12-01"
+template_type: "whitepaper"
+format:
+  stack-pdf: default
+  stack-html: default
+  stack-epub: default
+---
+
+# Cross-Format Compatibility Test
+
+This document tests the cross-format compatibility of Stack Intelligence templates across PDF, HTML, and EPUB formats.
+
+## Typography
+
+### Headings
+
+Heading 1 is demonstrated at the top. Below are examples of other heading levels:
+
+## Heading Level 2
+
+### Heading Level 3
+
+#### Heading Level 4
+
+##### Heading Level 5
+
+### Text Formatting
+
+Regular text paragraph with **bold text**, *italic text*, and `inline code`. 
+
+A [hyperlink](https://stackintelligence.com) to test link styling across formats.
+
+> A traditional blockquote for comparison with our featured quote shortcode.
+
+## Content Blocks
+
+### Featured Quote
+
+{{{< featured-quote color="primaryorange" size="normal" >}}
+Cross-format consistency is the cornerstone of professional document design. It ensures your message maintains its impact regardless of how it's consumed.
+
+Design Team, Stack Intelligence
+{{{< /featured-quote >}}
+
+### Case Study
+
+{{{< case-study company="Global Tech Solutions" segment="Enterprise Software" revenue="$450M" challenge="Legacy system integration" outcome="40% increased efficiency" >}}
+Global Tech Solutions needed to integrate their modern cloud platform with critical legacy systems while maintaining performance and reliability.
+
+The Stack Intelligence team designed a hybrid architecture using API gateways and data transformation layers that preserved legacy investments while enabling new capabilities.
+
+> The solution gave us the best of both worlds—continued use of systems our team knows well, plus all the advantages of modern cloud architecture.
+> 
+> — Maria Chen, CTO at Global Tech Solutions
+{{{< /case-study >}}
+
+### Listicle
+
+{{{< listicle title="Key Cross-Format Considerations" style="numbered" >}}
+1. **Consistent Typography**: Font families, sizes, and styles should maintain visual harmony across formats
+2. **Color Fidelity**: Brand colors should appear consistent on screens and in print
+3. **Layout Adaptability**: Designs should gracefully adapt to different screen sizes and page dimensions
+4. **Image Optimization**: Images should be appropriately sized and formatted for each output medium
+5. **Interactive Element Fallbacks**: Interactive elements should degrade gracefully in static formats
+{{{< /listicle >}}
+
+### Action Plan
+
+{{{< action-plan title="Cross-Format Implementation Plan" >}}
+1. **Assessment (Week 1)**: Audit existing documents across all distribution formats
+2. **Design (Weeks 2-3)**: Create unified design specifications with format-specific adaptations
+3. **Development (Weeks 4-6)**: Implement templates with cross-format compatibility
+   - Develop PDF/print templates
+   - Implement responsive HTML templates
+   - Create EPUB templates for e-readers
+4. **Testing (Week 7)**: Validate consistency across formats with sample documents
+5. **Deployment (Week 8)**: Roll out to content teams with training and documentation
+{{{< /action-plan >}}
+
+### Statistics Highlight
+
+{{{< stats-highlight title="Format Usage Statistics" >}}
+- **PDF Downloads**: 56% of document interactions
+- **HTML Viewing**: 32% of document interactions
+- **EPUB/Mobile**: 12% of document interactions
+- **Average Reading Time**: 12 minutes (PDF), 8 minutes (HTML), 15 minutes (EPUB)
+- **Completion Rate**: 72% (PDF), 58% (HTML), 85% (EPUB)
+{{{< /stats-highlight >}}
+
+### Quick Tips
+
+{{{< quick-tips title="Format Optimization Tips" >}}
+- Test documents on multiple devices before distribution
+- Optimize images specifically for each format
+- Consider reading context when choosing primary format
+- Use vector graphics when possible for better scaling
+- Include format-specific enhancements where appropriate
+{{{< /quick-tips >}}
+
+## Complex Elements
+
+### Tables
+
+| Format | Strengths | Limitations | Best Use Cases |
+|--------|-----------|-------------|----------------|
+| PDF | Professional presentation, Print-ready, Consistent layout | Limited interactivity, Larger file size | Executive reports, Print documents, Formal distribution |
+| HTML | Interactive capabilities, Accessibility features, Responsive design | Browser inconsistencies, Requires internet connection | Online documentation, Interactive reports, Web content |
+| EPUB | Optimal for e-readers, Reflowable text, Offline reading | Limited layout control, Variable rendering | E-books, Long-form content, Mobile reading |
+| DOCX | Widespread compatibility, Easy editing, Track changes | Formatting inconsistencies, Version compatibility | Collaborative documents, Editable reports, Internal use |
+
+### Figures and Images
+
+{{{< figure src="images/chart.png" caption="Figure 1: Format Usage Comparison" description="Comparison of document format usage across different audience segments" credit="Stack Intelligence Research, 2023" width="90%" >}}
+
+### Code Blocks
+
+{{{< code-block title="Responsive Media Query Example" language="css" >}}
+/* Media query for tablet devices */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 1rem;
+  }
+  
+  .sidebar {
+    display: none;
+  }
+  
+  .main-content {
+    width: 100%;
+  }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+{{{< /code-block >}}
+
+## Format-Specific Considerations
+
+### PDF-Specific Elements
+
+* High-resolution images for print (300 DPI)
+* Careful pagination and page breaks
+* Font embedding for consistent rendering
+* Print-specific color profiles (CMYK)
+* Headers and footers with page numbers
+
+### HTML-Specific Elements
+
+* Responsive design for different screen sizes
+* Interactive components (expandable sections, tooltips)
+* Accessible navigation and structure
+* Web-optimized images
+* CSS animations and transitions
+
+### EPUB-Specific Elements
+
+* Reflowable text for different device sizes
+* Table of contents navigation
+* Chapter-based organization
+* Embedded fonts while respecting file size
+* E-reader compatibility testing
+
+## Conclusion
+
+This test document demonstrates how Stack Intelligence templates maintain consistent branding, structure, and professionalism across different output formats. By carefully optimizing each element for specific formats while maintaining design cohesion, we ensure that documents deliver the same high-quality experience regardless of how they're consumed.
+
+The template system handles format-specific optimizations automatically, allowing content creators to focus on creating valuable content while ensuring it will look great in any format.
+
+## Next Steps
+
+* Review this document in all three formats (PDF, HTML, and EPUB)
+* Note any inconsistencies or formatting issues
+* Prioritize fixes based on impact and frequency
+* Implement improvements in the template system
+* Create additional cross-format test cases for edge cases

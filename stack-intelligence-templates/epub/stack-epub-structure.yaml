@@ -1,0 +1,35 @@
+metadata:
+  title: ""
+  subtitle: ""
+  author: ""
+  date: ""
+  publisher: "Stack Intelligence"
+  rights: "© 2023 Stack Intelligence"
+  language: "en-US"
+  
+cover-image: stack-cover.png
+
+toc:
+  depth: 3
+  
+book:
+  title: null
+  author: null
+  date: null
+  chapters:
+    - introduction.qmd
+    - part: "Main Content"
+      chapters:
+        - chapter-01.qmd
+        - chapter-02.qmd
+    - appendix.qmd
+
+pandoc:
+  epub-fonts:
+    - fonts/OpenSans-Regular.ttf
+    - fonts/OpenSans-Bold.ttf
+    - fonts/OpenSans-Italic.ttf
+    - fonts/OpenSans-BoldItalic.ttf
+  epub-cover-image: covers/stack-cover.png
+  epub-stylesheet: epub/stack-epub.css
+  epub-embed-fonts: true
