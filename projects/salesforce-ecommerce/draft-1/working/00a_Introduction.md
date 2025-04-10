@@ -7,9 +7,27 @@ Every executive knows that growth is the name of the game. Yet for many small an
 
 It's easy to get caught up in day-to-day sales figures or quarterly new customer targets. But step back and you'll see that long-term success hinges on how much value you **retain and grow** from each customer over time. Customer Lifetime Value (CLV) measures exactly that – the total revenue a customer generates throughout their relationship with your company. For SMB leaders, few metrics are more critical. Why? Because a high CLV means you are maximizing the revenue from your hard-won customers, whereas a low CLV means you're leaving money on the table.
 
+::: {.figure-stats}
+### CLV Impact Numbers
+
+- **5-7x** more expensive to acquire new customers than retain existing ones
+- **60-70%** likelihood of selling to an existing customer vs. 5-20% for new prospects
+- **25-95%** profit increase from just a 5% improvement in customer retention
+- **380%** increase in CLV over two years for businesses with a 360° customer strategy
+:::
+
 Focusing on CLV flips the growth equation in your favor. Instead of constantly spending big to chase new customers, you double down on delighting the ones you already have so they *stay longer and spend more*. Research bears this out: Increasing customer retention rates by just 5% can boost profits by **25% to 95%** (How Increasing Customer Retention Rates, Increases Profits - Benbria[^1]). That's not a typo – a small uptick in loyalty can nearly double your profit. Why such a dramatic impact? Loyal customers not only stick around (providing steady recurring revenue), but they also tend to buy more over time and refer others. In contrast, churning through customers is a profit killer.
 
 Here's another blunt fact: acquiring a new customer can cost **5 to 25 times more** than retaining an existing one (How Increasing Customer Retention Rates, Increases Profits - Benbria[^1]). SMBs often operate with limited marketing budgets, so pouring dollars into replacing customers you've lost is an expensive treadmill. It makes far more financial sense to invest in keeping customers happy and continuously earning their business. Existing customers are also much easier to sell to – the probability of converting an existing customer is as high as 60–70%, versus just 5–20% for a new prospect (How Increasing Customer Retention Rates, Increases Profits - Benbria[^2]). In short, your current customer base is *where the profit is*. Each additional year you keep a customer, and each additional product or service they buy from you, drives their lifetime value upward and fuels your growth.
+
+::: {.callout-success-story}
+### Success Story
+
+**Company:** AFDigital
+**Challenge:** Limited growth with traditional sales approaches focused on single transactions
+**Solution:** Implemented Salesforce's 360° customer strategy platform
+**Result:** 380% increase in CLV over two years and a 900% jump in revenue after fully leveraging the platform
+:::
 
 Leading companies understand that **CLV is the growth engine**. As one Salesforce case study noted, a business that embraced a 360° customer strategy saw a **380% increase in CLV** over two years and a **900% jump in revenue** after fully leveraging Salesforce's platform (How Three Salesforce Customers Transformed Their Business - Salesforce[^3]). While that's an extreme example, it underscores the exponential gains possible when you focus on maximizing each customer's value. For an SMB, doubling CLV might mean the difference between modest growth and breaking into a whole new level of market success. The message is clear: if you're not obsessing over CLV, you're missing the *ultimate lever* to scale your business.
 
@@ -63,6 +81,19 @@ Here's a sneak peek at what you can expect in this guide:
 - **Case Studies and Examples:** Theory is nothing without practice. That's why we include mini case studies of SMBs that underwent transformations – the obstacles they faced, the solutions implemented, and the results measured. You'll see how a fictitious (but typical) company, "Acme Widgets," goes from stagnant to stellar by applying the book's lessons in a cohesive narrative thread. And we'll sprinkle in lessons learned from real client engagements (with names changed as needed) to illustrate key points.
 - **Quick Wins and Long Plays:** Boosting CLV isn't an overnight task, but we identify some "quick win" actions that can start moving the needle within weeks, as well as longer-term plays that will compound value over months and years. Depending on your situation, you can prioritize accordingly – this guide helps you triage and focus on high-impact moves first.
 - **Stack Intelligence Insights:** While this book isn't about us, we will quietly leverage our experience as a Salesforce implementation partner to give you an edge. Think of it like having a friendly expert looking over your shoulder, pointing out warnings ("don't configure it *that* way, it'll cause problems down the road") and power tips ("here's a little-known feature you can capitalize on"). By the end, you'll understand not just *what* to do to double your CLV, but *how* to actually get it done in the real world. And if at some point you decide you want a partner to accelerate the journey, you'll know what to look for – whether it's engaging a team like Stack Intelligence or empowering an internal champion, you'll be set up for success.
+
+::: {.code-block-checklist}
+### Getting Started with CLV Focus
+
+- [ ] Conduct CLV audit: Calculate your current customer lifetime value metric
+- [ ] Identify customer churn drivers and friction points in your sales process
+- [ ] Map your customer journey across all touchpoints and identify gaps
+- [ ] Determine which Salesforce tools you need (Commerce Cloud, Revenue Cloud, etc.)
+- [ ] Set specific CLV improvement targets (e.g., 20% increase in 6 months)
+- [ ] Assign clear ownership of CLV improvements to a cross-functional team
+- [ ] Create a data collection plan to measure progress on key metrics
+- [ ] Develop a rollout plan for quick wins versus longer-term initiatives
+:::
 
 In writing this book, our tone is intentionally direct and no-nonsense, but always with your success at heart. Consider us a trusted advisor who won't sugarcoat the effort required, and who will call out both the exciting opportunities and the potential pitfalls ahead. We're also **energized** about what's possible – the prospect of an SMB leveling up its customer value to enterprise-like levels excites us, and it should excite you too. After all, doubling customer lifetime value isn't just a growth strategy; it's a mindset shift. It means believing that *every customer relationship is an asset to be nurtured and expanded*. That belief, combined with the right strategy and technology, creates a powerful momentum for your business.
 
