@@ -1,0 +1,80 @@
+{
+  "primary_colors": [
+    {
+      "name": "Primary Blue",
+      "hex": "#2a368e",
+      "rgb": "42, 54, 142",
+      "cmyk": "100, 95, 5, 0",
+      "usage": "Main brand color for logos, headings, and primary UI elements"
+    },
+    {
+      "name": "Primary Orange",
+      "hex": "#EB7527",
+      "rgb": "235, 117, 39",
+      "cmyk": "0, 65, 100, 0",
+      "usage": "Accent color for call-to-action buttons and highlights"
+    }
+  ],
+  "secondary_colors": [
+    {
+      "name": "Secondary Blue",
+      "hex": "#25457E",
+      "rgb": "37, 69, 126",
+      "cmyk": "100, 80, 15, 10",
+      "usage": "Alternative to Primary Blue when a slightly different tone is needed"
+    },
+    {
+      "name": "Light Gray",
+      "hex": "#c8c8c8",
+      "rgb": "200, 200, 200",
+      "cmyk": "0, 0, 0, 25",
+      "usage": "Used for INTELLIGENCE text in the logo and for secondary UI elements"
+    },
+    {
+      "name": "Medium Gray",
+      "hex": "#8C9BA5",
+      "rgb": "140, 155, 165",
+      "cmyk": "15, 5, 0, 35",
+      "usage": "For tertiary elements and subtle backgrounds"
+    },
+    {
+      "name": "Dark Gray",
+      "hex": "#899DA6",
+      "rgb": "137, 157, 166",
+      "cmyk": "18, 6, 0, 35",
+      "usage": "For text that needs to be less prominent than primary text"
+    }
+  ],
+  "text_colors": [
+    {
+      "name": "Primary Text",
+      "hex": "#000000",
+      "rgb": "0, 0, 0",
+      "cmyk": "0, 0, 0, 100",
+      "usage": "Main text color for body copy and content"
+    },
+    {
+      "name": "Secondary Text",
+      "hex": "#333333",
+      "rgb": "51, 51, 51",
+      "cmyk": "0, 0, 0, 80",
+      "usage": "For secondary information and captions"
+    }
+  ],
+  "background_colors": [
+    {
+      "name": "White",
+      "hex": "#FFFFFF",
+      "rgb": "255, 255, 255",
+      "cmyk": "0, 0, 0, 0",
+      "usage": "Primary background color for clean layouts"
+    },
+    {
+      "name": "Light Background",
+      "hex": "#F5F5F5",
+      "rgb": "245, 245, 245",
+      "cmyk": "0, 0, 0, 4",
+      "usage": "Alternative background color for subtle differentiation"
+    }
+  ]
+}

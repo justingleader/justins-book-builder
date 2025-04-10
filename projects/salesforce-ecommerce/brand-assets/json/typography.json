@@ -1,0 +1,64 @@
+{
+  "primary_font": {
+    "name": "Helvetica Neue",
+    "fallback": "Arial, sans-serif",
+    "weights": ["Light (300)", "Regular (400)", "Medium (500)", "Bold (700)"],
+    "usage_contexts": ["Print materials", "Formal communications", "Presentations", "Marketing collateral"]
+  },
+  "secondary_font": {
+    "name": "Roboto",
+    "fallback": "Arial, sans-serif",
+    "weights": ["Light (300)", "Regular (400)", "Medium (500)", "Bold (700)"],
+    "usage_contexts": ["Web applications", "Digital interfaces", "Email communications"]
+  },
+  "hierarchy": [
+    {
+      "level": "H1 - Main Heading",
+      "font": "Helvetica Neue Bold",
+      "size": "32px/36pt",
+      "color": "#2a368e",
+      "usage": "Page titles, document titles, major section headers"
+    },
+    {
+      "level": "H2 - Section Heading",
+      "font": "Helvetica Neue Bold",
+      "size": "24px/28pt",
+      "color": "#2a368e",
+      "usage": "Major section headers, chapter titles"
+    },
+    {
+      "level": "H3 - Subsection Heading",
+      "font": "Helvetica Neue Medium",
+      "size": "20px/24pt",
+      "color": "#2a368e",
+      "usage": "Subsection headers, important callouts"
+    },
+    {
+      "level": "H4 - Minor Heading",
+      "font": "Helvetica Neue Medium",
+      "size": "18px/22pt",
+      "color": "#333333",
+      "usage": "Minor section headers, feature titles"
+    },
+    {
+      "level": "Body Text",
+      "font": "Helvetica Neue Regular",
+      "size": "16px/20pt",
+      "color": "#000000",
+      "usage": "Main content, paragraphs, descriptions"
+    },
+    {
+      "level": "Caption/Small Text",
+      "font": "Helvetica Neue Light",
+      "size": "14px/18pt",
+      "color": "#333333",
+      "usage": "Captions, footnotes, supplementary information"
+    }
+  ],
+  "line_spacing": {
+    "headings": "1.2 times the font size",
+    "body_text": "1.5 times the font size",
+    "lists": "1.4 times the font size",
+    "captions": "1.3 times the font size"
+  }
+}

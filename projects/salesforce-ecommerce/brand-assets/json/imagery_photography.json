@@ -1,0 +1,32 @@
+{
+  "brand_image_style": {
+    "aesthetic": ["Professional and Polished", "Clean and Modern", "Technology-Forward"],
+    "visual_tone": ["Confident", "Approachable", "Solution-Oriented"]
+  },
+  "subject_matter": {
+    "people": {
+      "guidelines": ["Authentic Representation", "Diversity and Inclusion", "Business Context", "Engaged Expression"]
+    },
+    "business_environment": {
+      "guidelines": ["Modern Workspaces", "Technology Integration", "Industry-Specific Visual Cues"]
+    },
+    "product_service": {
+      "guidelines": ["Salesforce Integration", "Clean Digital Interfaces", "Results Visualization"]
+    }
+  },
+  "technical_specifications": {
+    "resolution": {
+      "print": "Minimum 300 DPI",
+      "digital": "72 DPI"
+    },
+    "format": {
+      "photographs": "JPG",
+      "graphics": "PNG with transparency"
+    }
+  },
+  "industry_specific": {
+    "manufacturing": ["Modern manufacturing environments", "Technology improving processes", "Data visualization"],
+    "healthcare": ["Clean professional environments", "Technology improving care", "Privacy and sensitivity"],
+    "b2b": ["Collaborative meetings", "Technology enabling growth", "Business transformation"]
+  }
+}

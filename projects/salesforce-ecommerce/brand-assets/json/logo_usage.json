@@ -1,0 +1,58 @@
+{
+  "variations": [
+    {
+      "name": "Full Logo with Icon and Text",
+      "filename": "Stack Intelligence With Logo.png",
+      "usage": "Primary logo for most applications, formal communications, letterheads, business cards, presentations"
+    },
+    {
+      "name": "Words Only Logo",
+      "filename": "Stack Intelligence Words Only.png",
+      "usage": "When brand is already established, headers in documents and presentations, horizontal spaces"
+    },
+    {
+      "name": "Icon Only Logo",
+      "filename": "Just S Logo.png",
+      "usage": "Social media profiles, favicons, app icons, small applications"
+    },
+    {
+      "name": "Full Logo in JPG format",
+      "filename": "STACK LOGO.jpg",
+      "usage": "When PNG transparency is not required or supported"
+    }
+  ],
+  "color_variations": [
+    {
+      "name": "Primary Blue",
+      "hex": "#2a368e",
+      "usage": "Default color for the STACK text and the S icon"
+    },
+    {
+      "name": "Light Gray",
+      "hex": "#c8c8c8",
+      "usage": "Used for INTELLIGENCE text in the full logo"
+    },
+    {
+      "name": "White (Reversed)",
+      "usage": "For use on dark backgrounds or the Primary Blue background"
+    },
+    {
+      "name": "Black (Monochrome)",
+      "usage": "For use in black and white documents"
+    }
+  ],
+  "size_requirements": {
+    "full_logo": {
+      "print": "Minimum width of 1.5 inches (38mm)",
+      "digital": "Minimum width of 150 pixels"
+    },
+    "words_only": {
+      "print": "Minimum width of 1 inch (25mm)",
+      "digital": "Minimum width of 100 pixels"
+    },
+    "icon_only": {
+      "print": "Minimum width of 0.5 inches (13mm)",
+      "digital": "Minimum width of 32 pixels"
+    }
+  }
+}

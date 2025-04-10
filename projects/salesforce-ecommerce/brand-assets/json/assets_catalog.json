@@ -1,0 +1,20 @@
+{
+  "logos": [
+    {"filename": "Just S Logo.png", "description": "Just S Logo"},
+    {"filename": "STACK LOGO.jpg", "description": "STACK LOGO"},
+    {"filename": "Stack Intelligence With Logo.png", "description": "Stack Intelligence With Logo"},
+    {"filename": "Stack Intelligence Words Only.png", "description": "Stack Intelligence Words Only"}
+  ],
+  "color_swatches": [
+    {"filename": "Primary_Blue.png", "description": "Primary Blue"},
+    {"filename": "Primary_Orange.png", "description": "Primary Orange"},
+    {"filename": "Secondary_Blue.png", "description": "Secondary Blue"},
+    {"filename": "Light_Gray.png", "description": "Light Gray"},
+    {"filename": "Medium_Gray.png", "description": "Medium Gray"},
+    {"filename": "Dark_Gray.png", "description": "Dark Gray"},
+    {"filename": "Primary_Text.png", "description": "Primary Text"},
+    {"filename": "Secondary_Text.png", "description": "Secondary Text"},
+    {"filename": "White.png", "description": "White"},
+    {"filename": "Light_Background.png", "description": "Light Background"}
+  ]
+}

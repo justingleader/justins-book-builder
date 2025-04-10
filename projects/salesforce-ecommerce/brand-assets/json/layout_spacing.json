@@ -1,0 +1,27 @@
+{
+  "grid_system": {
+    "columns": 12,
+    "margins": "At least 5% of the total width",
+    "gutters": "20px between columns",
+    "responsive": {
+      "desktop": "12-column grid with standard gutters",
+      "tablet": "8-column grid with 16px gutters",
+      "mobile": "4-column grid with 12px gutters"
+    }
+  },
+  "spacing_system": {
+    "base_unit": "8px",
+    "scale": ["8px", "16px", "24px", "32px", "40px", "48px", "56px", "64px"],
+    "vertical_spacing": {
+      "section_spacing": "64px (8 units)",
+      "paragraph_spacing": "24px (3 units)",
+      "heading_to_content": "16px (2 units)",
+      "list_item_spacing": "8px (1 unit)"
+    },
+    "horizontal_spacing": {
+      "text_margins": "32px (4 units) minimum",
+      "element_spacing": "16px (2 units) minimum",
+      "button_padding": "16px vertical, 24px horizontal"
+    }
+  }
+}
