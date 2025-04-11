@@ -1,0 +1,160 @@
+/*
+ * Quarto Templates Framework - Base Styles
+ * Version: 1.0.0
+ * Date: 2025-04-10
+ */
+
+// Base color variables - will be overridden by brand colors
+$primary-color: #333333;
+$secondary-color: #666666;
+$tertiary-color: #999999;
+$text-color: #333333;
+$text-secondary-color: #666666;
+$background-color: #ffffff;
+$success-color: #28a745;
+$info-color: #17a2b8;
+$warning-color: #ffc107;
+$danger-color: #dc3545;
+
+// Override with brand colors if available
+$if(brand_colors)$
+$if(brand_colors.primary)$
+$primary-color: $brand_colors.primary$ !default;
+$endif$
+$if(brand_colors.secondary)$
+$secondary-color: $brand_colors.secondary$ !default;
+$endif$
+$if(brand_colors.tertiary)$
+$tertiary-color: $brand_colors.tertiary$ !default;
+$endif$
+$if(brand_colors.text)$
+$text-color: $brand_colors.text$ !default;
+$endif$
+$if(brand_colors.text-secondary)$
+$text-secondary-color: $brand_colors.text-secondary$ !default;
+$endif$
+$if(brand_colors.background)$
+$background-color: $brand_colors.background$ !default;
+$endif$
+$if(brand_colors.callout-success)$
+$success-color: $brand_colors.callout-success$ !default;
+$endif$
+$if(brand_colors.callout-info)$
+$info-color: $brand_colors.callout-info$ !default;
+$endif$
+$endif$
+
+// Typography
+body {
+  font-family: $if(brand_fonts.main)$$brand_fonts.main$$else$'Arial', sans-serif$endif$;
+  line-height: 1.6;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-color;
+  font-family: $if(brand_fonts.headers)$$brand_fonts.headers$$else$$if(brand_fonts.main)$$brand_fonts.main$$else$'Arial', sans-serif$endif$$endif$;
+  font-weight: 600;
+}
+
+code, pre {
+  font-family: $if(brand_fonts.mono)$$brand_fonts.mono$$else$'Courier New', monospace$endif$;
+}
+
+// Stats Block Styling
+.stats-block {
+  background-color: lighten($primary-color, 55%);
+  border: 1px solid $primary-color;
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  
+  .stats-block-title {
+    color: $primary-color;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .stats-block-content {
+    ul {
+      padding-left: 1.5rem;
+      margin-bottom: 0;
+      
+      li {
+        margin-bottom: 0.5rem;
+        
+        strong {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+// Success Story Styling
+.callout-success {
+  background-color: lighten($success-color, 55%);
+  border: 1px solid $success-color;
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  
+  .callout-header {
+    color: darken($success-color, 10%);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+// Tips and Checklist Styling
+.callout-tip {
+  background-color: lighten($secondary-color, 45%);
+  border: 1px solid $secondary-color;
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  
+  .callout-header {
+    color: darken($secondary-color, 10%);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .task-list {
+    padding-left: 1.5rem;
+    margin-bottom: 0;
+    
+    .task-list-item {
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+// Add brand logo if available
+$if(brand_logos.main)$
+.brand-logo {
+  text-align: center;
+  margin: 2rem 0;
+  
+  img {
+    max-width: 300px;
+    height: auto;
+  }
+}
+$endif$

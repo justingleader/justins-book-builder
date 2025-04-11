@@ -12,17 +12,11 @@ template_type: "ebook"
 
 # 2x your Lifetime Customer Value with Salesforce Commerce and Revenue Cloud {.unnumbered}
 
-::: {.callout-tip}
-## Featured Quote
-
-*"Maximize your e-commerce potential through strategic implementation of Salesforce Commerce and Revenue Cloud solutions."*
-
-— Stack Intelligence Research Team
+::: {.featured-quote attribution="Stack Intelligence Research Team"}
+"Maximize your e-commerce potential through strategic implementation of Salesforce Commerce and Revenue Cloud solutions."
 :::
 
-::: {.callout-important}
-## STACK INTELLIGENCE EXECUTIVE GUIDE
-
+::: {.executive-guide}
 This guide provides a comprehensive framework for harnessing Salesforce Commerce and Revenue Cloud to maximize customer lifetime value and drive sustainable growth for your business.
 
 **Key Objectives:**

@@ -1,0 +1,39 @@
+% Title page partial for Quarto Templates Framework
+% Creates a custom title page for the document
+
+$if(title)$
+\begin{titlepage}
+\begin{center}
+
+% Add logo if available
+$if(brand_logos.main)$
+\vspace*{1cm}
+\includegraphics[width=0.6\textwidth]{$brand_paths.assets$$brand_logos.main$}
+\vspace*{2cm}
+$else$
+\vspace*{3cm}
+$endif$
+
+% Title
+{\Huge\bfseries $title$\par}
+\vspace{1.5cm}
+
+% Subtitle if available
+$if(subtitle)$
+{\Large\itshape $subtitle$\par}
+\vspace{1cm}
+$endif$
+
+% Authors
+$for(author)$
+{\large\bfseries $author$\par}
+$endfor$
+\vfill
+
+% Publisher and date
+{\large $publisher$\par}
+{\large $date$\par}
+
+\end{center}
+\end{titlepage}
+$endif$

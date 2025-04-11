@@ -29,29 +29,6 @@ book:
 
 format:
   pdf:
-    include-in-header: 
-      - text: |
-          \usepackage{xcolor}
-          \usepackage{fontspec}
-          \usepackage{fancyhdr}
-          
-          % Stack Intelligence colors
-          \definecolor{primaryblue}{HTML}{2a368e}
-          \definecolor{primaryorange}{HTML}{EB7527}
-          \definecolor{secondaryblue}{HTML}{7EA0C6}
-          \definecolor{secondarytext}{HTML}{666666}
-          
-          % Use system fonts
-          \setmainfont{Helvetica Neue}
-          
-          % Header and footer styling
-          \pagestyle{fancy}
-          \fancyhf{}
-          \fancyhead[LE,RO]{\thepage}
-          \fancyhead[RE,LO]{\slshape\nouppercase{\leftmark}}
-          \fancyfoot[C]{\textcopyright\ 2023 Stack Intelligence}
-          \renewcommand{\headrulewidth}{0.4pt}
-          \renewcommand{\footrulewidth}{0pt}
     documentclass: scrreprt
     papersize: letter
     fontsize: 11pt
@@ -59,9 +36,18 @@ format:
     toc-title: "CONTENTS"
     number-sections: true
     colorlinks: true
-    linkcolor: primaryblue
+    linkcolor: blue
     geometry:
       - margin=1in
     fig-width: 6
     fig-height: 4
     highlight-style: github
+    log-level: INFO
+    log-file: "templates.log"
+    include-in-header: 
+      text: |
+        \definecolor{primarycolor}{HTML}{2a368e}
+        \definecolor{secondarycolor}{HTML}{EB7527}
+        \definecolor{tertiarycolor}{HTML}{7EA0C6}
+
+brand: stack-intelligence

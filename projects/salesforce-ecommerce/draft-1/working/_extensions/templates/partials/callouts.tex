@@ -1,0 +1,58 @@
+% Callouts partial for Quarto Templates Framework
+% Defines custom callout environments
+
+% Success Story callout
+\newenvironment{successstory}[1]{%
+  \begin{tcolorbox}[
+    enhanced,
+    colback=successcolor!5,
+    colframe=successcolor,
+    fonttitle=\bfseries,
+    title=#1,
+    boxrule=0.5pt
+  ]
+}{%
+  \end{tcolorbox}
+}
+
+% Tip callout
+\newenvironment{tipcallout}[1]{%
+  \begin{tcolorbox}[
+    enhanced,
+    colback=secondarycolor!5,
+    colframe=secondarycolor,
+    fonttitle=\bfseries,
+    title=#1,
+    boxrule=0.5pt
+  ]
+}{%
+  \end{tcolorbox}
+}
+
+% Note callout
+\newenvironment{notecallout}[1]{%
+  \begin{tcolorbox}[
+    enhanced,
+    colback=infocolor!5,
+    colframe=infocolor,
+    fonttitle=\bfseries,
+    title=#1,
+    boxrule=0.5pt
+  ]
+}{%
+  \end{tcolorbox}
+}
+
+% Warning callout
+\newenvironment{warningcallout}[1]{%
+  \begin{tcolorbox}[
+    enhanced,
+    colback=warningcolor!5,
+    colframe=warningcolor,
+    fonttitle=\bfseries,
+    title=#1,
+    boxrule=0.5pt
+  ]
+}{%
+  \end{tcolorbox}
+}

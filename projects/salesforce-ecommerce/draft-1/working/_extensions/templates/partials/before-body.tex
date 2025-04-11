@@ -1,0 +1,12 @@
+% Before-body partial for Quarto Templates Framework
+% Adds custom styling and initialization for the document
+
+% Apply brand logo if available
+$if(brand_logos.main)$
+\begingroup
+\centering
+\vspace*{2cm}
+\includegraphics[width=0.6\textwidth]{$brand_paths.assets$$brand_logos.main$}
+\vspace*{2cm}
+\endgroup
+$endif$
