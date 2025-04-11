@@ -1,0 +1,167 @@
+% Quarto Templates Framework - LaTeX Template
+% Version: 1.0.0
+% Date: 2025-04-10
+
+\documentclass[$if(fontsize)$$fontsize$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
+
+% Load required packages
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+% Define default template colors
+\definecolor{primarycolor}{HTML}{333333}
+\definecolor{secondarycolor}{HTML}{666666}
+\definecolor{tertiarycolor}{HTML}{999999}
+\definecolor{successcolor}{HTML}{28a745}
+\definecolor{infocolor}{HTML}{17a2b8}
+\definecolor{warningcolor}{HTML}{ffc107}
+\definecolor{dangercolor}{HTML}{dc3545}
+
+% Set colors from brand metadata if available
+$if(brand_colors.primary)$
+\definecolor{primarycolor}{HTML}{$brand_colors.primary$}
+$endif$
+$if(brand_colors.secondary)$
+\definecolor{secondarycolor}{HTML}{$brand_colors.secondary$}
+$endif$
+$if(brand_colors.tertiary)$
+\definecolor{tertiarycolor}{HTML}{$brand_colors.tertiary$}
+$endif$
+$if(brand_colors.callout-success)$
+\definecolor{successcolor}{HTML}{$brand_colors.callout-success$}
+$endif$
+$if(brand_colors.callout-info)$
+\definecolor{infocolor}{HTML}{$brand_colors.callout-info$}
+$endif$
+$if(brand_colors.callout-warning)$
+\definecolor{warningcolor}{HTML}{$brand_colors.callout-warning$}
+$endif$
+$if(brand_colors.callout-danger)$
+\definecolor{dangercolor}{HTML}{$brand_colors.callout-danger$}
+$endif$
+
+% Configure fonts
+$if(brand_fonts.main)$
+\setmainfont{$brand_fonts.main$}
+$else$
+\setmainfont{Times New Roman}
+$endif$
+
+$if(brand_fonts.mono)$
+\setmonofont{$brand_fonts.mono$}
+$else$
+\setmonofont{Courier New}
+$endif$
+
+% Custom environments
+\newenvironment{statsblock}[1]{%
+  \begin{tcolorbox}[
+    enhanced,
+    colback=primarycolor!5,
+    colframe=primarycolor,
+    fonttitle=\bfseries,
+    title=#1,
+    boxrule=0.5pt
+  ]
+}{%
+  \end{tcolorbox}
+}
+
+\newenvironment{successblock}[1]{%
+  \begin{tcolorbox}[
+    enhanced,
+    colback=successcolor!5,
+    colframe=successcolor,
+    fonttitle=\bfseries,
+    title=#1,
+    boxrule=0.5pt
+  ]
+}{%
+  \end{tcolorbox}
+}
+
+\newenvironment{tipblock}[1]{%
+  \begin{tcolorbox}[
+    enhanced,
+    colback=secondarycolor!5,
+    colframe=secondarycolor,
+    fonttitle=\bfseries,
+    title=#1,
+    boxrule=0.5pt
+  ]
+}{%
+  \end{tcolorbox}
+}
+
+% Custom heading styles
+\titleformat{\chapter}{\Huge\bfseries\color{primarycolor}}{\thechapter}{1em}{}
+\titleformat{\section}{\LARGE\bfseries\color{primarycolor}}{\thesection}{1em}{}
+\titleformat{\subsection}{\Large\bfseries\color{primarycolor}}{\thesubsection}{1em}{}
+
+% Add logo to title page if available
+$if(brand_logos.main)$
+\newcommand{\brandlogo}{$brand_paths.assets$$brand_logos.main$}
+\newcommand{\includelogo}{
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{\brandlogo}
+  \end{center}
+}
+$else$
+\newcommand{\includelogo}{}
+$endif$
+
+% Include any user-specified header includes
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+\begin{document}
+
+$if(title)$
+\title{$title$}
+$endif$
+$if(author)$
+\author{$for(author)$$author$$sep$ \and $endfor$}
+$endif$
+$if(date)$
+\date{$date$}
+$endif$
+
+$if(title)$
+\maketitle
+$endif$
+
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+
+$for(include-before)$
+$include-before$
+$endfor$
+
+$if(toc)$
+\tableofcontents
+$endif$
+
+$if(lot)$
+\listoftables
+$endif$
+
+$if(lof)$
+\listoffigures
+$endif$
+
+$body$
+
+$for(include-after)$
+$include-after$
+$endfor$
+
+\end{document}

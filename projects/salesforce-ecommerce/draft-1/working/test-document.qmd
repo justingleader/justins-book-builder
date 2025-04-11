@@ -1,0 +1,87 @@
+---
+title: "Quarto Templates Framework Test"
+author: "Stack Intelligence"
+date: "April 10, 2025"
+format: 
+  templates-pdf:
+    documentclass: article
+    toc: true
+    log-level: DEBUG
+    log-file: "template-test.log"
+brand: stack-intelligence
+---
+
+# Introduction
+
+This document tests the Quarto Templates Framework with brand integration and custom components.
+
+## About This Framework
+
+The Quarto Templates Framework provides:
+
+- Consistent styling across formats
+- Brand switching capability
+- Custom components
+- Comprehensive logging
+
+# Component Examples
+
+## Stats Block
+
+Here's an example of a stats block:
+
+::: {.stats-block title="Key Performance Metrics"}
+- **80%** increase in conversion rate
+- **45%** reduction in bounce rate
+- **2.5x** improvement in customer retention
+:::
+
+## Callout
+
+Here's an example of a callout:
+
+::: {.callout-success}
+## Success Story: Company Name
+
+**Company:** Acme Corp  
+**Industry:** Manufacturing  
+**Challenge:** Legacy systems causing delays  
+**Solution:** Implemented AI-driven workflow  
+**Results:**  
+- 35% increase in productivity
+- $2.4M annual cost savings
+- 98% customer satisfaction rating
+:::
+
+## Tip/Checklist
+
+Here's an example of a tip with a checklist:
+
+::: {.callout-tip}
+## Implementation Checklist
+
+- [ ] Audit current systems
+- [ ] Define requirements
+- [ ] Select technology stack
+- [ ] Develop prototype
+- [ ] Test with users
+- [ ] Deploy to production
+:::
+
+# Brand Integration Test
+
+This document should use the Stack Intelligence brand colors and fonts.
+
+## Colors
+
+- Primary: `#2a368e`
+- Secondary: `#EB7527`
+
+## Fonts
+
+- Main: Helvetica Neue
+- Mono: SF Mono
+
+# Conclusion
+
+The framework provides a flexible way to create branded documents with consistent components across formats.

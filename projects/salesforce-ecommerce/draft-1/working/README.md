@@ -1,87 +1,85 @@
-# Salesforce Commerce and Revenue Cloud E-Book
+# Quarto Templates Framework
 
-This Quarto project contains the content for the "2x your Lifetime Customer Value with Salesforce Commerce and Revenue Cloud" e-book.
+A flexible Quarto template system with branding support, consistent components across formats, and comprehensive logging.
 
-## Current Implementation
+## Status
 
-The e-book uses the Stack Intelligence templates for styling and formatting. The implementation includes:
+This project is currently in active development. See [PROGRESS.md](PROGRESS.md) for current status.
 
-- Professional cover page with Stack Intelligence branding
-- Custom content blocks with Stack Intelligence styling:
-  - Featured quotes with orange accents
-  - Case studies with structured metadata
-  - Listicles with enhanced formatting
-  - Statistics highlights for key metrics
-  - Action plans with distinctive styling
-  - Quick tips sections for implementation advice
-- Custom typography using Helvetica Neue
-- Professional layout with headers, footers, and proper spacing
+## Features
 
-## Files and Structure
+- **Cross-format Support**: Consistent components for PDF, HTML, and EPUB outputs
+- **Brand System**: Easily switch between different brand styles without changing templates
+- **Component Library**: Reusable, styled components like stats blocks and callouts
+- **Comprehensive Logging**: Detailed logging system for troubleshooting
 
-- `_quarto.yml` - Configuration file for the Quarto project
-- `index.md` - Cover page and book frontmatter
-- `00a_Introduction.md` - Introduction chapter
-- `01.md` through `12.md` - Main chapters of the book
-- `_book/` - Generated output files
-- `stack-shortcodes.lua` - Local implementation of the Stack Intelligence shortcodes
+## Directory Structure
 
-## Building the Book
-
-To render the book to PDF:
-
-```bash
-quarto render --to pdf
+```
+quarto-templates/
+├── _extensions/
+│   └── templates/          # Core extension
+│       ├── _extension.yml  # Extension configuration
+│       ├── templates/      # Format templates
+│       ├── partials/       # Template partials
+│       ├── resources/      # CSS and JS resources
+│       ├── lua/            # Lua filters
+│       └── examples/       # Example documents
+│
+├── branding/               # Brand assets
+│   ├── stack-intelligence/ # One brand
+│   └── other-brand/        # Another brand
+│
+└── docs/                   # Documentation
 ```
 
-Output will be generated in the `_book` directory.
+## Installation
 
-## Relationship to Global Templates
+Coming soon.
 
-This project uses a localized version of the Stack Intelligence templates. The global templates are available in:
+## Usage
 
-- `/common/templates/stack-intelligence-templates/` - Full template system
-- `/common/filters/` - Global Lua filters
+```yaml
+---
+title: "My Document"
+format: templates-pdf     # Or templates-html, templates-epub
+brand: stack-intelligence # Brand name (folder in branding/)
+log-level: INFO          # DEBUG, INFO, WARNING, ERROR
+log-file: "_logs/render.log"
+---
+```
 
-This localization enables the project to work independently while maintaining the Stack Intelligence brand identity.
+## Component Examples
 
-## Shortcodes
-
-The book uses the following shortcodes for custom content blocks:
-
+### Stats Block
 ```markdown
-{{{< featured-quote color="primaryorange" size="normal" >}}
-Quote text goes here.
-
-Author Name, Position at Company
-{{{< /featured-quote >}}
-
-{{{< case-study company="Company Name" segment="Industry" revenue="$XXM" challenge="Challenge" outcome="Outcome" >}}
-Case study content goes here.
-
-> "Optional quote from company representative."
-> 
-> — Name, Position
-{{{< /case-study >}}
-
-{{{< listicle title="Title" style="numbered" >}}
-1. First item
-2. Second item
-3. Third item
-{{{< /listicle >}}
-
-{{{< stats-highlight title="Statistics Title" >}}
-- **Statistic 1**: Value and context
-- **Statistic 2**: Value and context
-{{{< /stats-highlight >}}
-
-{{{< action-plan title="Action Plan Title" >}}
-1. **First step**: Details
-2. **Second step**: Details
-{{{< /action-plan >}}
-
-{{{< quick-tips title="Tips Title" >}}
-- First tip
-- Second tip
-{{{< /quick-tips >}}
+::: {.stats-block title="Key Performance Metrics"}
+- **80%** increase in conversion rate
+- **45%** reduction in bounce rate
+- **2.5x** improvement in customer retention
+:::
 ```
+
+### Success Story
+```markdown
+::: {.callout-success}
+## Success Story: Company Name
+
+**Company:** Acme Corp  
+**Industry:** Manufacturing  
+**Challenge:** Legacy systems causing delays  
+**Solution:** Implemented AI-driven workflow  
+**Results:**  
+- 35% increase in productivity
+- $2.4M annual cost savings
+- 98% customer satisfaction rating
+:::
+```
+
+## License
+
+Copyright © 2025 Stack Intelligence. All rights reserved.
+
+## Contact
+
+For more information, contact info@stackintelligence.com

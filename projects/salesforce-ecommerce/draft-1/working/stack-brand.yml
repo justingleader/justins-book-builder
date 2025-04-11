@@ -1,0 +1,25 @@
+name: Stack Intelligence
+version: 1.0.0
+description: Stack Intelligence brand assets for Quarto templates
+
+colors:
+  primary: "#2a368e"
+  secondary: "#EB7527"
+  tertiary: "#7EA0C6"
+  text: "#333333"
+  text-secondary: "#666666"
+  background: "#ffffff"
+  callout-success: "#28a745"
+  callout-info: "#17a2b8"
+  callout-warning: "#ffc107"
+  callout-danger: "#dc3545"
+
+fonts:
+  main: "Helvetica Neue"
+  headers: "Helvetica Neue"
+  mono: "SF Mono"
+
+logos:
+  main: "assets/logo.png"
+  dark: "assets/logo-dark.png"
+  favicon: "assets/favicon.ico"
