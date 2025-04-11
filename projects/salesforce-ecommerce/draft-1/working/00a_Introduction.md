@@ -8,36 +8,47 @@ Every executive knows that growth is the name of the game. Yet for many small an
 
 This introduction frames why CLV should be your obsession, highlights the costly peril of customer churn, and explains how Salesforce Commerce Cloud and Revenue Cloud – when implemented correctly – form a unified engine to radically increase CLV through personalization, seamless sales processes, cross-sells/upsells, and smart automation. Let's dive in with a clear-eyed look at why **customer lifetime value is everything** for your business's future.
 
-{{{< featured-quote color="primaryorange" size="normal" >}}
-The companies that will thrive in the next decade won't be those that acquire the most customers—they'll be those that create the most customer lifetime value.
+::: {.callout-tip}
+## Featured Quote
 
-Customer Experience Expert, Salesforce
-{{{< /featured-quote >}}
+*"The companies that will thrive in the next decade won't be those that acquire the most customers—they'll be those that create the most customer lifetime value."*
+
+— Customer Experience Expert, Salesforce
+:::
 
 ## CLV: The Ultimate Growth Lever for SMBs
 
 It's easy to get caught up in day-to-day sales figures or quarterly new customer targets. But step back and you'll see that long-term success hinges on how much value you **retain and grow** from each customer over time. Customer Lifetime Value (CLV) measures exactly that – the total revenue a customer generates throughout their relationship with your company. For SMB leaders, few metrics are more critical. Why? Because a high CLV means you are maximizing the revenue from your hard-won customers, whereas a low CLV means you're leaving money on the table.
 
-{{{< stats-highlight title="CLV Impact Numbers" >}}
+::: {.callout-note}
+## CLV Impact Numbers
+
 - **5-7x** more expensive to acquire new customers than retain existing ones
 - **60-70%** likelihood of selling to an existing customer vs. 5-20% for new prospects
 - **25-95%** profit increase from just a 5% improvement in customer retention
 - **380%** increase in CLV over two years for businesses with a 360° customer strategy
-{{{< /stats-highlight >}}
+:::
 
 Focusing on CLV flips the growth equation in your favor. Instead of constantly spending big to chase new customers, you double down on delighting the ones you already have so they *stay longer and spend more*. Research bears this out: Increasing customer retention rates by just 5% can boost profits by **25% to 95%**. That's not a typo – a small uptick in loyalty can nearly double your profit. Why such a dramatic impact? Loyal customers not only stick around (providing steady recurring revenue), but they also tend to buy more over time and refer others. In contrast, churning through customers is a profit killer.
 
 Here's another blunt fact: acquiring a new customer can cost **5 to 25 times more** than retaining an existing one. SMBs often operate with limited marketing budgets, so pouring dollars into replacing customers you've lost is an expensive treadmill. It makes far more financial sense to invest in keeping customers happy and continuously earning their business. Existing customers are also much easier to sell to – the probability of converting an existing customer is as high as 60–70%, versus just 5–20% for a new prospect. In short, your current customer base is *where the profit is*. Each additional year you keep a customer, and each additional product or service they buy from you, drives their lifetime value upward and fuels your growth.
 
-{{{< case-study company="AFDigital" segment="B2B Technology Services" revenue="$5-10 Million" challenge="Limited growth with traditional sales approaches" outcome="380% increase in CLV over two years" >}}
+::: {.callout-success}
+## Success Story: AFDigital
+
+**Industry Segment:** B2B Technology Services  
+**Annual Revenue:** $5-10 Million  
+**Business Challenge:** Limited growth with traditional sales approaches  
+**Strategic Outcome:** 380% increase in CLV over two years  
+
 AFDigital transformed their business by implementing Salesforce's 360° customer strategy platform. By focusing on customer relationships rather than one-off transactions, they were able to dramatically increase customer retention and expand their relationships with existing clients.
 
 Their approach involved creating personalized customer journeys, automating follow-up communications, and enabling their sales team with better visibility into customer needs and opportunities.
 
 > "By shifting our focus from acquiring new customers to maximizing the value of existing relationships, we saw a 900% jump in revenue after fully leveraging the Salesforce platform."
-> 
+>
 > — Marketing Director, AFDigital
-{{{< /case-study >}}
+:::
 
 Leading companies understand that **CLV is the growth engine**. For an SMB, doubling CLV might mean the difference between modest growth and breaking into a whole new level of market success. The message is clear: if you're not obsessing over CLV, you're missing the *ultimate lever* to scale your business.
 
@@ -81,7 +92,9 @@ In short, Salesforce Commerce + Revenue Cloud equips an SMB with *big-business c
 
 The pages that follow are a candid and practical **strategy guide** for unlocking exponential growth by maximizing customer lifetime value with Salesforce Commerce and Revenue Cloud. This is not theoretical fluff, nor is it a veiled sales pitch. Instead, we offer a clear roadmap drawn from real-world experience. Throughout the book, you'll find insights gathered from actual SMB case studies – including businesses that have doubled or even tripled their CLV – and from our own on-the-ground expertise implementing Salesforce solutions for companies like yours.
 
-{{{< listicle title="What You'll Get From This Guide" style="numbered" >}}
+::: {.callout-note}
+## What You'll Get From This Guide
+
 1. **A Hard Look at the Status Quo:** We'll diagnose why traditional sales and ecommerce approaches often fall short. You might recognize some pitfalls in your own organization – and that's okay. We set the baseline with honesty about common challenges.
 
 2. **Proven Strategies to 2x CLV:** Each chapter will break down a core strategy to increase customer value – from leveraging data for personalized marketing, to optimizing the quote-to-cash pipeline, to launching loyalty programs that actually stick. These aren't generic tips; they are **proven techniques** that have driven growth for real companies.
@@ -91,6 +104,6 @@ The pages that follow are a candid and practical **strategy guide** for unlockin
 4. **Case Studies and Examples:** Theory is nothing without practice. That's why we include mini case studies of SMBs that underwent transformations – the obstacles they faced, the solutions implemented, and the results measured.
 
 5. **Quick Wins and Long Plays:** Boosting CLV isn't an overnight task, but we identify some "quick win" actions that can start moving the needle within weeks, as well as longer-term plays that will compound value over months and years.
-{{{< /listicle >}}
+:::
 
 By the time you finish this book, you will have a practical game plan for harnessing Salesforce to grow your customer relationships in both depth and length – in other words, to 2x your CLV. The opportunity to dramatically increase your customer lifetime value is knocking. Open the door, and let's get started on transforming that opportunity into reality – one strategic step at a time.

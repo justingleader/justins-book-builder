@@ -32,10 +32,8 @@ format:
     include-in-header: 
       - text: |
           \usepackage{xcolor}
-          \usepackage{tcolorbox}
           \usepackage{fontspec}
           \usepackage{fancyhdr}
-          \tcbuselibrary{skins,breakable}
           
           % Stack Intelligence colors
           \definecolor{primaryblue}{HTML}{2a368e}
@@ -67,5 +65,3 @@ format:
     fig-width: 6
     fig-height: 4
     highlight-style: github
-    filters:
-      - stack-shortcodes.lua
